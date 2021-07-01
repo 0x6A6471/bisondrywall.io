@@ -1,9 +1,6 @@
 <script>
   import '../app.postcss';
-  import Container from '../components/Container.svelte';
+  import '../../styles/global.css';
 </script>
 
-<!-- <Container> -->
-
-<!-- The slot refers to the children -->
 <slot />

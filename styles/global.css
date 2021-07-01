@@ -1,0 +1,11 @@
+body {
+  height: 100%;
+  overflow: auto;
+  color: #666e75;
+  background-color: #f9fafe;
+}
+
+h1 {
+  color: #222328;
+  font-weight: 700;
+}

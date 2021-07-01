@@ -1,32 +1,25 @@
 <script>
-  import { FacebookIcon } from 'svelte-feather-icons';
+  import { ArrowRightIcon } from 'svelte-feather-icons';
+  import Nav from '../components/Nav.svelte';
 </script>
 
 <svelte:head>
   <title>Home</title>
 </svelte:head>
 
-<div class="container flex flex-col justify-center items-center h-screen">
-  <p class="text-2xl text-gray-400 mb-16">Coming soon...</p>
-  <img class="h-80" src="/logo.png" alt="logo" />
-  <div class="flex items-center text-gray-500 mt-16 text-lg">
-    <span>Find us on</span>
-    <a
-      class="flex items-center hover:underline cursor-pointer"
-      href="https://m.facebook.com/bisondrywall/"
+<Nav background="bg-[#222328]" />
+<div class="bg-[#222328] py-24">
+  <div class="flex flex-col justify-center items-center h-full">
+    <h1 class="text-6xl text-gray-200">Your Drywall Solution</h1>
+    <h2 class="text-2xl mt-2">
+      Drywall and plaster solutions that speak for themselves
+    </h2>
+    <button
+      type="button"
+      class="inline-flex items-center mt-12 px-4 py-2 font-medium rounded-md text-yellow800 bg-yellow500 focus:outline-none"
     >
-      <FacebookIcon class="text-[#1877f2] -mr-1" size="20" />
-      <span>acebook</span>
-    </a>
+      Contact us
+      <ArrowRightIcon class="ml-2" size="16" />
+    </button>
   </div>
 </div>
-
-<style>
-  .container {
-    background: linear-gradient(
-      180deg,
-      rgba(62, 62, 62, 1) 0%,
-      rgba(86, 86, 86, 1) 50%
-    );
-  }
-</style>
