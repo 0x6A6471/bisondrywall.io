@@ -1,2 +1,5 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<svelte:head>
+  <title>Bison Drywall</title>
+</svelte:head>
+<h1 class="text-red-500">Bison Dywall LLC.</h1>
+
