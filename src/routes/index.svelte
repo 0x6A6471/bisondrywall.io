@@ -30,9 +30,9 @@
 
 <!-- This example requires Tailwind CSS v2.0+ -->
 <div class="py-16 overflow-hidden lg:py-24">
-  <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
     <div
-      class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center"
+      class="relative mt-12 lg:mt-24 md:grid md:grid-cols-2 md:gap-8 md:items-center"
     >
       <div class="relative">
         <h3 class="text-2xl font-extrabold tracking-tight sm:text-3xl">
@@ -152,9 +152,9 @@
 
     <div class="relative mt-12 sm:mt-16 lg:mt-24">
       <div
-        class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center"
+        class="md:grid md:grid-flow-row-dense md:grid-cols-2 md:gap-8 md:items-center"
       >
-        <div class="lg:col-start-2">
+        <div class="md:col-start-2">
           <h3 class="text-2xl font-extrabold tracking-tight sm:text-3xl">
             Drywall and plaster repair
           </h3>
