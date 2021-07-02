@@ -10,12 +10,12 @@
   </h3>
   <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
     <Testomonial
-      text="Ethan did a high quality job and was super fast!"
+      text="Ethan and his crew did a high quality job and was super fast!"
       name="Matt Wilfuer"
       city="Appleton, WI"
     />
     <Testomonial
-      text="Bison Drywall was a breath of fresh air."
+      text="Bison Drywall was a breath of fresh air.  Great price and even better service."
       name="Mike Lee"
       city="Weyauwega, WI"
     />

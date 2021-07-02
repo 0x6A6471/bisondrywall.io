@@ -4,8 +4,8 @@
   export let city: string;
 </script>
 
-<blockquote class="max-w-sm my-8">
-  <div class="h-20 lg:h-24">
+<blockquote class="max-w-sm my-8 mx-auto ">
+  <div class="h-20">
     <p class="text-gray-900 font-medium">&ldquo;{text}&rdquo;</p>
   </div>
   <div>
