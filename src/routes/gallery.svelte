@@ -72,7 +72,9 @@
     </h2>
   </div>
 
-  <div class="grid grid-cols-3 gap-1 mb-24">
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-24 px-2 lg:px-0"
+  >
     {#each images as image (image.id)}
       <img class="image" src={image.src} />
     {/each}
