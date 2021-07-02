@@ -1,6 +1,8 @@
 <script>
   import { ArrowRightIcon } from 'svelte-feather-icons';
+
   import Nav from '../components/Nav.svelte';
+  import Testomonial from '../components/Testomonial.svelte';
 </script>
 
 <svelte:head>
@@ -28,7 +30,7 @@
   </div>
 </div>
 
-<!-- This example requires Tailwind CSS v2.0+ -->
+<!-- First two grid sections -->
 <div class="py-16 overflow-hidden lg:py-24">
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
     <div
@@ -48,7 +50,6 @@
               <div
                 class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-[#514513]"
               >
-                <!-- Heroicon name: outline/globe-alt -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6"
@@ -77,7 +78,6 @@
               <div
                 class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-[#514513]"
               >
-                <!-- Heroicon name: outline/scale -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6"
@@ -104,44 +104,6 @@
       </div>
 
       <div class="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
-        <!-- <svg
-          class="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
-          width="784"
-          height="404"
-          fill="none"
-          viewBox="0 0 784 404"
-        >
-          <defs>
-            <pattern
-              id="ca9667ae-9f92-4be7-abcb-9e3d727f2941"
-              x="0"
-              y="0"
-              width="20"
-              height="20"
-              patternUnits="userSpaceOnUse"
-            >
-              <rect
-                x="0"
-                y="0"
-                width="4"
-                height="4"
-                class="text-gray-200"
-                fill="currentColor"
-              />
-            </pattern>
-          </defs>
-          <rect
-            width="784"
-            height="404"
-            fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)"
-          />
-        </svg>
-        <img
-          class="relative mx-auto"
-          width="490"
-          src="https://tailwindui.com/img/features/feature-example-1.png"
-          alt=""
-        /> -->
         <img
           class="image"
           src="https://scontent-bos3-1.xx.fbcdn.net/v/t1.6435-9/fr/cp0/e15/q65/191208448_116767007240408_5069716486836646362_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=110474&_nc_ohc=I5SZwKoFrbQAX8zX1Oe&_nc_ht=scontent-bos3-1.xx&tp=14&oh=67c34c4be21b47d249c6ef1716c34183&oe=60E3B443"
@@ -199,7 +161,6 @@
                 <div
                   class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-[#514513]"
                 >
-                  <!-- Heroicon name: outline/mail -->
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-6 w-6"
@@ -270,52 +231,44 @@
         </div>
 
         <div class="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
-          <!-- <svg
-            class="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
-            width="784"
-            height="404"
-            fill="none"
-            viewBox="0 0 784 404"
-            aria-hidden="true"
-          >
-            <defs>
-              <pattern
-                id="e80155a9-dfde-425a-b5ea-1f6fadd20131"
-                x="0"
-                y="0"
-                width="20"
-                height="20"
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x="0"
-                  y="0"
-                  width="4"
-                  height="4"
-                  class="text-gray-200"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width="784"
-              height="404"
-              fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)"
-            />
-          </svg>
-          <img
-            class="relative mx-auto"
-            width="490"
-            src="https://tailwindui.com/img/features/feature-example-2.png"
-            alt=""
-          /> -->
           <img
             class="image"
             src="https://scontent-bos3-1.xx.fbcdn.net/v/t1.6435-9/fr/cp0/e15/q65/188371028_114823764101399_2062241810618321323_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=110474&_nc_ohc=qSlTG5lz9pYAX-yFut1&_nc_ht=scontent-bos3-1.xx&tp=14&oh=f56e3d3a9d70ce36035fa8916a24723d&oe=60E3AE69"
+            alt="Fixing drywall"
           />
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="bg-[#F1F3FD] py-24 px-4">
+  <h3
+    class="text-3xl mb-20 font-extrabold tracking-tight sm:text-4xl text-center"
+  >
+    Loved by the people of Wisconsin
+  </h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
+    <Testomonial
+      text="Ethan did a high quality job and was super fast!"
+      name="Matt Wilfuer"
+      city="Appleton, WI"
+    />
+    <Testomonial
+      text="Bison Drywall was a breath of fresh air."
+      name="Mike Lee"
+      city="Weyauwega, WI"
+    />
+    <Testomonial
+      text="Expectation were met, and prices were very reasonable."
+      name="Jordan Fields"
+      city="Oshkosh, WI"
+    />
+    <Testomonial
+      text="After this experience I can tell you the choice is simple...Bison Drywall."
+      name="Tanner Huntley"
+      city="Milwaukee, WI"
+    />
   </div>
 </div>
 
