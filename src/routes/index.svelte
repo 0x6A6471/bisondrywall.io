@@ -105,7 +105,7 @@
 
       <div class="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
         <img
-          class="image"
+          class="rightImage"
           src="https://scontent-bos3-1.xx.fbcdn.net/v/t1.6435-9/fr/cp0/e15/q65/191208448_116767007240408_5069716486836646362_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=110474&_nc_ohc=I5SZwKoFrbQAX8zX1Oe&_nc_ht=scontent-bos3-1.xx&tp=14&oh=67c34c4be21b47d249c6ef1716c34183&oe=60E3B443"
           alt="plaster"
         />
@@ -232,7 +232,7 @@
 
         <div class="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
           <img
-            class="image"
+            class="leftImage"
             src="https://scontent-bos3-1.xx.fbcdn.net/v/t1.6435-9/fr/cp0/e15/q65/188371028_114823764101399_2062241810618321323_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=110474&_nc_ohc=qSlTG5lz9pYAX-yFut1&_nc_ht=scontent-bos3-1.xx&tp=14&oh=f56e3d3a9d70ce36035fa8916a24723d&oe=60E3AE69"
             alt="Fixing drywall"
           />
@@ -245,9 +245,20 @@
 <Testomonials />
 
 <style>
-  .image {
+  .rightImage {
     max-height: 600px;
-    margin: 0 auto;
     border-radius: 6px;
+    margin-left: auto;
+  }
+  .leftImage {
+    max-height: 600px;
+    border-radius: 6px;
+  }
+
+  @media (max-width: 767px) {
+    .rightImage,
+    .leftImage {
+      margin: 0 auto;
+    }
   }
 </style>
