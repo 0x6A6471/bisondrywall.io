@@ -12,6 +12,7 @@
 
   async function logout() {
     const { error } = await supabase.auth.signOut();
+    goto('/');
   }
 </script>
 
