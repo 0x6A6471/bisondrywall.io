@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { goto } from '$app/navigation';
+
   import supabase from '../lib/db';
 
   let email: string;
@@ -9,6 +11,11 @@
       email,
       password,
     });
+
+    if (user.email === 'hello@jakequinter.io') {
+      goto('/admin');
+    }
+
     if (error) alert('Error: cannot sign in');
   }
 </script>

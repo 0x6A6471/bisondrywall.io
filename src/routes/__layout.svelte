@@ -5,6 +5,7 @@
   import { session } from '$app/stores';
   import { browser } from '$app/env';
   import '../../styles/global.css';
+  import { goto } from '$app/navigation';
 
   // only run this function when in the browser
   if (browser) {
