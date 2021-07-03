@@ -1,5 +1,14 @@
 <script>
+  import { session } from '$app/stores';
+  import { goto } from '$app/navigation';
+
+  import supabase from '../lib/db';
   export let background = 'bg-transparent';
+
+  async function logout() {
+    const { error } = await supabase.auth.signOut();
+    goto('/');
+  }
 </script>
 
 <nav class={`flex justify-between max-w-7xl ${background} mx-auto p-2`}>
@@ -12,5 +21,8 @@
     <a class="mx-2 hover:text-yellow-500" href="/gallery">Gallery</a>
     <a class="mx-2 hover:text-yellow-500" href="/careers">Careers</a>
     <a class="ml-2 hover:text-yellow-500" href="/contact">Contact Us</a>
+    {#if $session}
+      <button on:click={logout}>Logout</button>
+    {/if}
   </div>
 </nav>
