@@ -11,18 +11,21 @@
   }
 </script>
 
-<nav class={`flex justify-between max-w-7xl ${background} mx-auto p-2`}>
+<nav class={`flex justify-between max-w-7xl ${background} mx-auto p-4`}>
   <a href="/">
     <img class="h-8" src="/logo.png" alt="logo" />
   </a>
 
   <div>
-    <a class="mr-2 hover:text-yellow-500" href="/">Home</a>
-    <a class="mx-2 hover:text-yellow-500" href="/gallery">Gallery</a>
-    <a class="mx-2 hover:text-yellow-500" href="/careers">Careers</a>
-    <a class="ml-2 hover:text-yellow-500" href="/contact">Contact Us</a>
+    <a class="mr-2 hover:text-yellow500" href="/">Home</a>
+    <a class="mx-2 hover:text-yellow500" href="/gallery">Gallery</a>
+    <a class="mx-2 hover:text-yellow500" href="/careers">Careers</a>
+    <a class="ml-2 hover:text-yellow500" href="/contact">Contact Us</a>
     {#if $session}
-      <button on:click={logout}>Logout</button>
+      <button
+        class="ml-2 text-gray-900 bg-gray100 shadow-sm hover:shadow-md px-2 py-1 rounded-md"
+        on:click={logout}>Logout</button
+      >
     {/if}
   </div>
 </nav>

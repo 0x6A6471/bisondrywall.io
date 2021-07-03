@@ -10,4 +10,4 @@
   }
 </script>
 
-<Container>admin ui</Container>
+<Container>Admin ui</Container>
