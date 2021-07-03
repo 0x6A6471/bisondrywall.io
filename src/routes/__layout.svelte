@@ -5,7 +5,6 @@
   import { session } from '$app/stores';
   import { browser } from '$app/env';
   import '../../styles/global.css';
-  import { goto } from '$app/navigation';
 
   // only run this function when in the browser
   if (browser) {
@@ -21,7 +20,4 @@
 
 <div>
   <slot />
-
-  <pre
-    class="mt-12 w-96 overflow-scroll">{JSON.stringify($session, null, 2)}</pre>
 </div>
