@@ -1,14 +1,24 @@
-<script>
+<script lang="ts">
   import supabase from '../lib/db';
 
-  async function signUp() {
-    // Create a new user
-    const { user, error } = await supabase.auth.signUp({
-      email: 'hello@jakequinter.io',
-      password: 'example-password',
+  let email: string;
+  let password: string;
+
+  async function login() {
+    const { user, error } = await supabase.auth.signIn({
+      email,
+      password,
     });
-    console.log(user, error);
+    if (error) alert('Error: cannot sign in');
   }
 </script>
 
-<button on:click={signUp}>Login in</button>
+<form on:submit|preventDefault={login}>
+  <label for="email">Email</label>
+  <input bind:value={email} />
+
+  <label for="password">Password</label>
+  <input bind:value={password} />
+
+  <button>login</button>
+</form>
