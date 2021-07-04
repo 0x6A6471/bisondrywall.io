@@ -76,6 +76,16 @@
       setTimeout(() => {
         error = undefined;
       }, 5000);
+    } else {
+      error = {
+        type: 'error',
+        heading: 'Error deleting photo!',
+        text: sbError.message,
+      };
+
+      setTimeout(() => {
+        error = undefined;
+      }, 5000);
     }
   }
 
