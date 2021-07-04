@@ -2,23 +2,34 @@
   import { goto } from '$app/navigation';
 
   import supabase from '../lib/db';
+  import Notification from '../components/Notification.svelte';
 
   let email: string;
   let password: string;
+  let error: boolean = false;
 
   async function login() {
-    const { user, error } = await supabase.auth.signIn({
+    const { user, error: sbError } = await supabase.auth.signIn({
       email,
       password,
     });
 
-    if (user.email === 'hello@jakequinter.io') {
+    if (user?.email === 'hello@jakequinter.io') {
       goto('/admin');
     }
 
-    if (error) alert('Error: cannot sign in');
+    if (sbError) {
+      error = true;
+      setTimeout(() => {
+        error = false;
+      }, 5000);
+    }
   }
 </script>
+
+{#if error}
+  <Notification />
+{/if}
 
 <div
   class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
