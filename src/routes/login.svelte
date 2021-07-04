@@ -6,7 +6,7 @@
 
   let email: string;
   let password: string;
-  let error: boolean = false;
+  let error: string = '';
 
   async function login() {
     const { user, error: sbError } = await supabase.auth.signIn({
@@ -19,16 +19,17 @@
     }
 
     if (sbError) {
-      error = true;
+      console.log('sberror', sbError);
+      error = sbError.message;
       setTimeout(() => {
-        error = false;
+        error = '';
       }, 5000);
     }
   }
 </script>
 
 {#if error}
-  <Notification />
+  <Notification type="error" heading="Error occured!" text={error} />
 {/if}
 
 <div
