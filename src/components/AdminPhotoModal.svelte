@@ -9,7 +9,7 @@
 
   export let isShow: boolean;
   export let handleModal: () => void;
-  export let refetchPhotos: () => Array<Photo>;
+  export let refetchPhotos: () => void;
 
   let src: string = '';
   let alt: string = '';
