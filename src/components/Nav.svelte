@@ -17,7 +17,6 @@
   </a>
 
   <div>
-    <a class="mr-2 hover:text-yellow500" href="/">Home</a>
     <a class="mx-2 hover:text-yellow500" href="/gallery">Gallery</a>
     <a class="mx-2 hover:text-yellow500" href="/careers">Careers</a>
     <a class="ml-2 hover:text-yellow500" href="/contact">Contact Us</a>
