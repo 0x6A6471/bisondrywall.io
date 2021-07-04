@@ -79,9 +79,21 @@
     </h2>
   </div>
 
-  <button on:click={handleModal}>Add new photo</button>
-
-  <div>
+  <div class="mb-24 p-2">
+    <div class="flex flex-col sm:flex-row justify-between items-center mb-8">
+      <div>
+        <h3 class="text-xl text-center sm:text-left">Live photos</h3>
+        <p class="text-center sm:text-left">
+          These are your current photos being displayed on the gallery page.
+        </p>
+      </div>
+      <div>
+        <button
+          class="bg-white px-4 py-2 mt-4 sm:mt-0 rounded-md shadow-sm text-gray900 border border-gray100 hover:border-gray200 hover:shadow-md"
+          on:click={handleModal}>Add new photo</button
+        >
+      </div>
+    </div>
     <ul
       role="list"
       class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
@@ -112,8 +124,5 @@
     </ul>
   </div>
 
-  <!-- {#if isShow} -->
   <AdminPhotoModal {isShow} {handleModal} {refetchPhotos} />
-  <!-- {/if} -->
 </Container>
-<!-- https://scontent-bos3-1.xx.fbcdn.net/v/t1.6435-9/fr/cp0/e15/q65/190826133_116766923907083_3611317413702531098_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=110474&_nc_ohc=NQR9rENqNJMAX9sbSMe&_nc_ht=scontent-bos3-1.xx&tp=14&oh=7ce485d00bbc33df167c2de09ce41bc9&oe=60E4D7A7 -->

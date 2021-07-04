@@ -58,8 +58,8 @@
           </h3>
           <div class="mt-2">
             <p class="text-sm text-gray-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequatur amet labore.
+              To add a new photo, copy the image address from Facebook and give
+              it meaningful alternate text.
             </p>
           </div>
         </div>
@@ -74,7 +74,7 @@
                 type="text"
                 required
                 class="relative block w-full px-3 py-2 mb-4 border border-gray200 placeholder-gray300 text-gray900 rounded focus:outline-none focus:ring-0 focus:border-gray400 focus:z-10 sm:text-sm"
-                placeholder="Image address"
+                placeholder="https://scontent-bos3-1.xx.fbcdn.net/v/..."
                 bind:value={src}
               />
             </div>
@@ -88,7 +88,7 @@
                 type="text"
                 required
                 class="relative block w-full px-3 py-2 border border-gray200 placeholder-gray300 text-gray900 rounded focus:outline-none focus:ring-0 focus:border-gray400 focus:z-10 sm:text-sm"
-                placeholder="Image alternate text"
+                placeholder="Drywall ceiling patch"
                 bind:value={alt}
               />
             </div>
