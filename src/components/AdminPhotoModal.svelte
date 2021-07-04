@@ -1,8 +1,15 @@
 <script lang="ts">
   import supabase from '$lib/db';
 
+  type Photo = {
+    id: string;
+    src: string;
+    alt: string;
+  };
+
   export let isShow: boolean;
   export let handleModal: () => void;
+  export let refetchPhotos: () => Array<Photo>;
 
   let src: string = '';
   let alt: string = '';
@@ -11,6 +18,11 @@
     const newPhoto = await supabase
       .from('photos')
       .insert({ src: src, alt: alt });
+
+    if (!newPhoto.error) {
+      refetchPhotos();
+      handleModal();
+    }
   }
 </script>
 
