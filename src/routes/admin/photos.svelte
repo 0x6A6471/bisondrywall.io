@@ -36,7 +36,7 @@
   import supabase from '$lib/db';
   import Container from '../../components/Container.svelte';
   import AdminPhotoModal from '../../components/AdminPhotoModal.svelte';
-  import Notification from '../../components/Notification.svelte';
+  import Notification from '../../components/shared/Notification.svelte';
 
   // check if Jake or Ethan are logged in
   if (!$session) {

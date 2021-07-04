@@ -2,7 +2,7 @@
   import { goto } from '$app/navigation';
 
   import supabase from '../lib/db';
-  import Notification from '../components/Notification.svelte';
+  import Notification from '../components/shared/Notification.svelte';
 
   let email: string;
   let password: string;
