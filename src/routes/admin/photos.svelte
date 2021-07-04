@@ -36,6 +36,7 @@
   import supabase from '$lib/db';
   import Container from '../../components/Container.svelte';
   import AdminPhotoModal from '../../components/AdminPhotoModal.svelte';
+  import Notification from '../../components/Notification.svelte';
 
   // check if Jake or Ethan are logged in
   if (!$session) {
@@ -48,14 +49,34 @@
     alt: string;
   };
 
-  export let photos: Array<Photo>;
+  type Error = {
+    type: string;
+    heading: string;
+    text: string;
+  };
 
+  export let photos: Array<Photo>;
+  let error: Error | undefined;
   let isShow: boolean = false;
 
   async function handleDelete(id: string) {
-    await supabase.from('photos').delete().match({ id: id });
+    const { error: sbError } = await supabase
+      .from('photos')
+      .delete()
+      .match({ id: id });
 
-    refetchPhotos();
+    if (!sbError) {
+      error = {
+        type: 'success',
+        heading: 'Successfully deleted!',
+        text: 'Your image has been removed.',
+      };
+      refetchPhotos();
+
+      setTimeout(() => {
+        error = undefined;
+      }, 5000);
+    }
   }
 
   function handleModal() {
@@ -70,6 +91,10 @@
     photos = data.photos.data;
   }
 </script>
+
+{#if error}
+  <Notification type={error.type} heading={error.heading} text={error.text} />
+{/if}
 
 <Container>
   <div class="text-center mb-24">

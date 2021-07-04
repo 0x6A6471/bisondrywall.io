@@ -23,6 +23,9 @@
       refetchPhotos();
       handleModal();
     }
+
+    src = '';
+    alt = '';
   }
 </script>
 
