@@ -1,5 +1,21 @@
-<script context="module">
-  export async function load({ fetch, error, status }) {
+<script context="module" lang="ts">
+  type LoadInput<
+    PageParams extends Record<string, string> = Record<string, string>,
+    Context extends Record<string, any> = Record<string, any>,
+    Session = any
+  > = {
+    page: {
+      host: string;
+      path: string;
+      params: PageParams;
+      query: URLSearchParams;
+    };
+    fetch: (info: RequestInfo, init?: RequestInit) => Promise<Response>;
+    session: Session;
+    context: Context;
+  };
+
+  export async function load({ fetch }: LoadInput) {
     const res = await fetch('/api/photos');
     const photos = await res.json();
 
