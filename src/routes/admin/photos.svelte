@@ -1,5 +1,5 @@
 <script context="module">
-  export async function load({ fetch, error, status }) {
+  export async function load({ fetch }) {
     const res = await fetch('/api/photos');
     const photos = await res.json();
 
@@ -14,10 +14,17 @@
 </script>
 
 <script lang="ts">
-  import supabase from '$lib/db';
+  import { session } from '$app/stores';
+  import { goto } from '$app/navigation';
 
+  import supabase from '$lib/db';
   import Container from '../../components/Container.svelte';
   import AdminPhotoModal from '../../components/AdminPhotoModal.svelte';
+
+  // check if Jake or Ethan are logged in
+  if (!$session) {
+    goto('/login');
+  }
 
   type Photo = {
     id: string;
