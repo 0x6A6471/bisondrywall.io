@@ -17,12 +17,12 @@
   </a>
 
   <div>
-    <a class="mx-2 hover:text-yellow500" href="/gallery">Gallery</a>
-    <a class="mx-2 hover:text-yellow500" href="/careers">Careers</a>
-    <a class="ml-2 hover:text-yellow500" href="/contact">Contact Us</a>
+    <a class="mx-1 md:mx-2 hover:text-yellow500" href="/gallery">Gallery</a>
+    <a class="mx-1 md:mx-2 hover:text-yellow500" href="/careers">Careers</a>
+    <a class="ml-1 md:ml-2 hover:text-yellow500" href="/contact">Contact Us</a>
     {#if $session}
       <button
-        class="ml-2 text-gray-900 bg-gray100 shadow-sm hover:shadow-md px-2 py-1 rounded-md"
+        class="ml-2 text-gray900 bg-gray100 shadow-sm hover:shadow-md px-2 py-1 rounded-md"
         on:click={logout}>Logout</button
       >
     {/if}
