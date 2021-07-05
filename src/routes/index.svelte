@@ -6,6 +6,7 @@
   } from 'svelte-feather-icons';
 
   import Nav from '../components/Nav.svelte';
+  import Footer from '../components/shared/Footer.svelte';
   import Testomonials from '../components/sections/Testomonials.svelte';
 </script>
 
@@ -309,6 +310,8 @@
     </div>
   </div>
 </div>
+
+<Footer />
 
 <style>
   .rightImage {
