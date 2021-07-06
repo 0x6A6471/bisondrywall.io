@@ -9,7 +9,9 @@
         class="mx-2 text-sm hover:text-gray700">Contact Us</a
       >
       <a href="/privacy" class="mx-2 text-sm hover:text-gray700">Privacy</a>
-      <a class="mx-2 text-sm hover:text-gray700">Terms of Service</a>
+      <a href="/terms" class="mx-2 text-sm hover:text-gray700"
+        >Terms of Service</a
+      >
     </div>
   </div>
 </div>
