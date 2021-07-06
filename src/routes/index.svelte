@@ -25,13 +25,13 @@
     <h2 class="text-lg md:text-xl lg:text-2xl mt-2 text-[#666e75] font-normal">
       Drywall and plaster solutions that speak for themselves
     </h2>
-    <button
-      type="button"
+    <a
+      href="mailto:bisondrywallllc@gmail.com"
       class="inline-flex items-center mt-12 px-4 py-2 font-medium rounded-md text-yellow800 bg-yellow500 focus:outline-none"
     >
       Contact us
       <ArrowRightIcon class="ml-2" size="16" />
-    </button>
+    </a>
   </div>
 </div>
 
@@ -323,13 +323,13 @@
     >
       We work with you and for you to accomplish whatever you need
     </h4>
-    <button
-      type="button"
+    <a
+      href="mailto:bisondrywallllc@gmail.com"
       class="inline-flex items-center mt-12 px-4 py-2 font-medium rounded-md text-gray100 bg-gray900 focus:outline-none"
     >
       Contact us
       <ArrowRightIcon class="ml-2" size="16" />
-    </button>
+    </a>
   </div>
 </div>
 

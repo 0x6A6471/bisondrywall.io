@@ -1,4 +1,4 @@
-<div class="max-w-7xl mx-auto my-24">
+<div class="max-w-5xl mx-auto my-24">
   <div data-custom-class="body">
     <div>
       <strong
