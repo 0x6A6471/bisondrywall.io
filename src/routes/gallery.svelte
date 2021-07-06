@@ -76,17 +76,12 @@
   <div
     class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-24 lg:px-0"
   >
-    <!-- {#await getPhotos() then response} -->
     {#each photos as photo (photo.id)}
-      <img class="image" src={photo.images[0].source} alt={photo.alt_text} />
+      <img
+        class="image rounded"
+        src={photo.images[0].source}
+        alt={photo.alt_text}
+      />
     {/each}
-    <!-- {/await} -->
   </div>
 </Container>
-
-<style>
-  .image {
-    border-radius: 6px;
-    min-height: 500px;
-  }
-</style>
