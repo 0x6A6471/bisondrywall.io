@@ -16,13 +16,24 @@
   };
 
   export async function load({ fetch }: LoadInput) {
-    const res = await fetch('/api/photos');
+    // const res = await fetch('/api/photos');
+    // const photos = await res.json();
+    const res = await fetch(
+      'https://graph.facebook.com/112096071040835/photos?limit=100&fields=link,alt_text,images',
+      {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${import.meta.env.VITE_FACEBOOK_ACCESS_TOKEN}`,
+        },
+      }
+    );
+
     const photos = await res.json();
 
     if (res.ok) {
       return {
         props: {
-          photos: photos.photos.data,
+          photos: photos.data,
         },
       };
     }
