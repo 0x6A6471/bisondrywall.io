@@ -85,7 +85,7 @@
       <div class="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
         <img
           class="rightImage"
-          src="https://scontent-bos3-1.xx.fbcdn.net/v/t1.6435-9/fr/cp0/e15/q65/191208448_116767007240408_5069716486836646362_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=110474&_nc_ohc=I5SZwKoFrbQAX8zX1Oe&_nc_ht=scontent-bos3-1.xx&tp=14&oh=67c34c4be21b47d249c6ef1716c34183&oe=60E3B443"
+          src="https://image.shutterstock.com/shutterstock/photos/1116716516/display_1500/stock-photo-building-drywall-ceiling-elements-for-led-lighting-caucasian-worker-patching-drywall-1116716516.jpg"
           alt="plaster"
         />
       </div>
@@ -161,7 +161,7 @@
         <div class="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
           <img
             class="leftImage"
-            src="https://scontent-bos3-1.xx.fbcdn.net/v/t1.6435-9/fr/cp0/e15/q65/188371028_114823764101399_2062241810618321323_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=110474&_nc_ohc=qSlTG5lz9pYAX-yFut1&_nc_ht=scontent-bos3-1.xx&tp=14&oh=f56e3d3a9d70ce36035fa8916a24723d&oe=60E3AE69"
+            src="https://image.shutterstock.com/image-photo/construction-worker-assemble-suspended-ceiling-600w-794469577.jpg"
             alt="Fixing drywall"
           />
         </div>
@@ -226,13 +226,13 @@
       <div class="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
         <img
           class="rightImage"
-          src="https://scontent-bos3-1.xx.fbcdn.net/v/t1.6435-9/fr/cp0/e15/q65/191208448_116767007240408_5069716486836646362_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=110474&_nc_ohc=I5SZwKoFrbQAX8zX1Oe&_nc_ht=scontent-bos3-1.xx&tp=14&oh=67c34c4be21b47d249c6ef1716c34183&oe=60E3B443"
+          src="https://image.shutterstock.com/image-photo/construction-worker-puts-finishing-touch-600w-698339818.jpg"
           alt="plaster"
         />
       </div>
     </div>
 
-    <div class="relative mt-12 sm:mt-16 lg:mt-24">
+    <!-- <div class="relative mt-12 sm:mt-16 lg:mt-24">
       <div
         class="md:grid md:grid-flow-row-dense md:grid-cols-2 md:gap-8 md:items-center"
       >
@@ -307,7 +307,29 @@
           />
         </div>
       </div>
-    </div>
+    </div> -->
+  </div>
+</div>
+
+<div class="bg-[#E6D27F] max-w-screen-md mx-auto rounded">
+  <div
+    class="flex flex-col justify-center items-center h-full py-16 text-center"
+  >
+    <h3 class="text-lg md:text-2xl lg:text-4xl">
+      Let us help, whatever your needs
+    </h3>
+    <h4
+      class="text-md md:text-lg lg:text-xl mt-2 text-gray600 font-normal max-w-md"
+    >
+      We work with you and for you to accomplish whatever you need
+    </h4>
+    <button
+      type="button"
+      class="inline-flex items-center mt-12 px-4 py-2 font-medium rounded-md text-gray100 bg-gray900 focus:outline-none"
+    >
+      Contact us
+      <ArrowRightIcon class="ml-2" size="16" />
+    </button>
   </div>
 </div>
 

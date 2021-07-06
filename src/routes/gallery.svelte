@@ -16,13 +16,24 @@
   };
 
   export async function load({ fetch }: LoadInput) {
-    const res = await fetch('/api/photos');
+    // const res = await fetch('/api/photos');
+    // const photos = await res.json();
+    const res = await fetch(
+      'https://graph.facebook.com/112096071040835/photos?limit=100&fields=link,alt_text,images',
+      {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${import.meta.env.VITE_FACEBOOK_ACCESS_TOKEN}`,
+        },
+      }
+    );
+
     const photos = await res.json();
 
     if (res.ok) {
       return {
         props: {
-          photos: photos.photos.data,
+          photos: photos.data,
         },
       };
     }
@@ -32,10 +43,17 @@
 <script lang="ts">
   import Container from '../components/Container.svelte';
 
+  type Image = {
+    height: number;
+    source: string;
+    width: number;
+  };
+
   type Photo = {
     id: string;
-    src: string;
-    alt: string;
+    link: string;
+    alt_text: string;
+    images: Array<Image>;
   };
 
   export let photos: Array<Photo>;
@@ -60,7 +78,7 @@
   >
     <!-- {#await getPhotos() then response} -->
     {#each photos as photo (photo.id)}
-      <img class="image" src={photo.src} alt={photo.alt} />
+      <img class="image" src={photo.images[0].source} alt={photo.alt_text} />
     {/each}
     <!-- {/await} -->
   </div>
