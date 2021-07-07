@@ -22,12 +22,5 @@
     >
       Go to jobs
     </a>
-
-    <a
-      href="/admin/photos"
-      class="inline-flex items-center mt-12 px-4 py-2 font-medium rounded-md text-white bg-gray900 focus:outline-none"
-    >
-      Go to photos
-    </a>
   </div>
 </Container>
