@@ -53,7 +53,7 @@
           <div class="relative">
             <dt>
               <div
-                class="test absolute flex items-center justify-center h-12 w-12 rounded-md shadow-xl"
+                class="test absolute flex items-center justify-center h-12 w-12 rounded-md"
               >
                 <CheckCircleIcon size="20" class="text-[#D7B732]" />
               </div>
@@ -346,17 +346,17 @@
     border-radius: 6px;
   }
 
+  .test {
+    background: rgb(34, 35, 40);
+    background: radial-gradient(
+      circle,
+      rgba(34, 35, 40, 1) 0%,
+      rgba(57, 58, 62, 1) 50%,
+      rgba(34, 35, 40, 1) 100%
+    );
+    box-shadow: 0 3px 10px #514513;
+  }
   @media (max-width: 767px) {
-    .test {
-      background: rgb(34, 35, 40);
-      background: linear-gradient(
-        90deg,
-        rgba(34, 35, 40, 1) 0%,
-        rgba(215, 183, 50, 1) 50%,
-        rgba(34, 35, 40, 1) 100%
-      );
-    }
-
     .rightImage,
     .leftImage {
       margin: 0 auto;
