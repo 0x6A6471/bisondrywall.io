@@ -77,7 +77,11 @@
     class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-24 lg:px-0"
   >
     {#each photos as photo (photo.id)}
-      <img class="rounded" src={photo.images[0].source} alt={photo.alt_text} />
+      <img
+        class="rounded shadow-lg"
+        src={photo.images[0].source}
+        alt={photo.alt_text}
+      />
     {/each}
   </div>
 </Container>

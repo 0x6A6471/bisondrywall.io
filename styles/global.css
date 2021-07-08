@@ -7,7 +7,17 @@ body {
   height: 100%;
   overflow: auto;
   color: #666e75;
-  background-color: #f9fafe;
+  background: #f9fafe; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #fafbfe,
+    #f9fafe
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #fafbfe,
+    #f9fafe
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 h1,
