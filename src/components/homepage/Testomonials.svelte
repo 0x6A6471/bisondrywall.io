@@ -1,5 +1,5 @@
 <script>
-  import Testomonial from '../Testomonial.svelte';
+  import Testomonial from './Testomonial.svelte';
 </script>
 
 <div class="bg-[#F1F3FD] py-24 px-4">

@@ -7,27 +7,26 @@
 
   import Nav from '../components/Nav.svelte';
   import Footer from '../components/shared/Footer.svelte';
-  import Testomonials from '../components/sections/Testomonials.svelte';
+  import Testomonials from '../components/homepage/Testomonials.svelte';
+  import ListItem from '../components/homepage/ListItem.svelte';
 </script>
 
 <svelte:head>
   <title>Home</title>
 </svelte:head>
 
-<div class="bg-[#222328]">
-  <Nav />
+<div class="jumbotron">
+  <Nav linkColor="gray100" />
   <div
     class="flex flex-col justify-center items-center h-full py-24 text-center"
   >
-    <h1 class="text-2xl md:text-4xl lg:text-6xl text-gray-200">
-      Your Drywall Solution
-    </h1>
-    <h2 class="text-lg md:text-xl lg:text-2xl mt-2 text-[#666e75] font-normal">
+    <h1 class="text-2xl md:text-4xl lg:text-6xl">Your Drywall Solution</h1>
+    <h2 class="text-lg md:text-xl lg:text-2xl mt-2 text-gray800 font-normal">
       Drywall and plaster solutions that speak for themselves
     </h2>
     <a
       href="mailto:bisondrywallllc@gmail.com"
-      class="inline-flex items-center mt-12 px-4 py-2 font-medium rounded-md text-yellow800 bg-yellow500 focus:outline-none"
+      class="btn-grad inline-flex items-center mt-12 px-8 py-4 font-medium rounded-md focus:outline-none"
     >
       Contact us
       <ArrowRightIcon class="ml-2" size="16" />
@@ -50,35 +49,16 @@
         </p>
 
         <dl class="mt-10 space-y-10">
-          <div class="relative">
-            <dt>
-              <div
-                class="test absolute flex items-center justify-center h-12 w-12 rounded-md"
-              >
-                <CheckCircleIcon size="20" class="text-[#D7B732]" />
-              </div>
-              <h4 class="ml-16 text-lg leading-6 font-medium ">Residential</h4>
-            </dt>
-            <dd class="mt-2 ml-16 text-base">
-              Home extensions, wall additions, or simple patches, we work
-              quickly to accomodate any of your drywall needs.
-            </dd>
-          </div>
-
-          <div class="relative">
-            <dt>
-              <div
-                class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-[#3E3E3E]"
-              >
-                <CheckCircleIcon size="20" class="text-[#D7B732]" />
-              </div>
-              <h4 class="ml-16 text-lg leading-6 font-medium">Commercial</h4>
-            </dt>
-            <dd class="mt-2 ml-16 text-base">
-              Looking for upgrades to the office? We help proffessional
-              businesses with additions and upgrade their suites.
-            </dd>
-          </div>
+          <ListItem
+            title="Residential"
+            description="Home extensions, wall additions, or simple patches, we work quickly to
+          accomodate any of your drywall needs."
+          />
+          <ListItem
+            title="Commercial"
+            description="Looking for upgrades to the office? We help proffessional
+            businesses with additions and upgrade their suites."
+          />
         </dl>
       </div>
 
@@ -105,56 +85,24 @@
           </p>
 
           <dl class="mt-10 space-y-10">
-            <div class="relative">
-              <dt>
-                <div
-                  class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-[#3E3E3E]"
-                >
-                  <ZapIcon size="20" class="text-[#D7B732]" />
-                </div>
-                <h4 class="ml-16 text-lg leading-6 font-medium">
-                  Drywall cracks or holes
-                </h4>
-              </dt>
-              <dd class="mt-2 ml-16 text-base">
-                Our team fixes damaged drywall caused by moisture, poor
-                installation, or even the settling of the structure.
-              </dd>
-            </div>
-
-            <div class="relative">
-              <dt>
-                <div
-                  class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-[#3E3E3E]"
-                >
-                  <ZapIcon size="20" class="text-[#D7B732]" />
-                </div>
-                <h4 class="ml-16 text-lg leading-6 font-medium">
-                  Fire, smoke, or water damage
-                </h4>
-              </dt>
-              <dd class="mt-2 ml-16 text-base">
-                Recent fire or pipe burst? We remove the lingering smell of
-                smoke or mildew.
-              </dd>
-            </div>
-
-            <div class="relative">
-              <dt>
-                <div
-                  class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-[#3E3E3E]"
-                >
-                  <ZapIcon size="20" class="text-[#D7B732]" />
-                </div>
-                <h4 class="ml-16 text-lg leading-6 font-medium">
-                  Identify what helps you
-                </h4>
-              </dt>
-              <dd class="mt-2 ml-16 text-base">
-                Our team identifies whether repair or replacement is best suited
-                for your home or business.
-              </dd>
-            </div>
+            <ListItem
+              title="Drywall cracks or holes"
+              description="Our team fixes damaged drywall caused by moisture, poor
+            installation, or even the settling of the structure."
+              icon="ZapIcon"
+            />
+            <ListItem
+              title="Fire, smoke, or water damage"
+              description="Recent fire or pipe burst? We remove the lingering smell of
+            smoke or mildew."
+              icon="ZapIcon"
+            />
+            <ListItem
+              title="Identify what helps you"
+              description="Our team identifies whether repair or replacement is best suited
+            for your home or business."
+              icon="ZapIcon"
+            />
           </dl>
         </div>
 
@@ -187,39 +135,16 @@
         </p>
 
         <dl class="mt-10 space-y-10">
-          <div class="relative">
-            <dt>
-              <div
-                class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-[#3E3E3E]"
-              >
-                <CheckCircleIcon size="20" class="text-[#D7B732]" />
-              </div>
-              <h4 class="ml-16 text-lg leading-6 font-medium ">
-                Plaster finishing
-              </h4>
-            </dt>
-            <dd class="mt-2 ml-16 text-base">
-              Unfinished drywall doesn’t look the best. Let our professionals
-              help get your drywall ready for paint or paper.
-            </dd>
-          </div>
-
-          <div class="relative">
-            <dt>
-              <div
-                class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-[#3E3E3E]"
-              >
-                <CheckCircleIcon size="20" class="text-[#D7B732]" />
-              </div>
-              <h4 class="ml-16 text-lg leading-6 font-medium">
-                Texturing drywall
-              </h4>
-            </dt>
-            <dd class="mt-2 ml-16 text-base">
-              Offering sand texture, orange peel texture, knockdown texture, or
-              popcorn texture.
-            </dd>
-          </div>
+          <ListItem
+            title="Plaster finishing"
+            description="Unfinished drywall doesn’t look the best. Let our professionals
+              help get your drywall ready for paint or paper."
+          />
+          <ListItem
+            title="Texturing drywall"
+            description="Our team identifies whether repair or replacement is best suited
+            for your home or business."
+          />
         </dl>
       </div>
 
@@ -231,83 +156,6 @@
         />
       </div>
     </div>
-
-    <!-- <div class="relative mt-12 sm:mt-16 lg:mt-24">
-      <div
-        class="md:grid md:grid-flow-row-dense md:grid-cols-2 md:gap-8 md:items-center"
-      >
-        <div class="md:col-start-2">
-          <h3 class="text-2xl font-extrabold tracking-tight sm:text-3xl">
-            Drywall and plaster repair
-          </h3>
-          <p class="mt-3 text-lg">
-            Sometimes you don’t need to completely replace damaged drywall. Our
-            team of professionals fix damages to save you money.
-          </p>
-
-          <dl class="mt-10 space-y-10">
-            <div class="relative">
-              <dt>
-                <div
-                  class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-[#3E3E3E]"
-                >
-                  <ZapIcon size="20" class="text-[#D7B732]" />
-                </div>
-                <h4 class="ml-16 text-lg leading-6 font-medium">
-                  Drywall cracks or holes
-                </h4>
-              </dt>
-              <dd class="mt-2 ml-16 text-base">
-                Our team fixes damaged drywall caused by moisture, poor
-                installation, or even the settling of the structure.
-              </dd>
-            </div>
-
-            <div class="relative">
-              <dt>
-                <div
-                  class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-[#3E3E3E]"
-                >
-                  <ZapIcon size="20" class="text-[#D7B732]" />
-                </div>
-                <h4 class="ml-16 text-lg leading-6 font-medium">
-                  Fire, smoke, or water damage
-                </h4>
-              </dt>
-              <dd class="mt-2 ml-16 text-base">
-                Recent fire or pipe burst? We remove the lingering smell of
-                smoke or mildew.
-              </dd>
-            </div>
-
-            <div class="relative">
-              <dt>
-                <div
-                  class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-[#3E3E3E]"
-                >
-                  <ZapIcon size="20" class="text-[#D7B732]" />
-                </div>
-                <h4 class="ml-16 text-lg leading-6 font-medium">
-                  Identify what helps you
-                </h4>
-              </dt>
-              <dd class="mt-2 ml-16 text-base">
-                Our team identifies whether repair or replacement is best suited
-                for your home or business.
-              </dd>
-            </div>
-          </dl>
-        </div>
-
-        <div class="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
-          <img
-            class="leftImage"
-            src="https://scontent-bos3-1.xx.fbcdn.net/v/t1.6435-9/fr/cp0/e15/q65/188371028_114823764101399_2062241810618321323_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=110474&_nc_ohc=qSlTG5lz9pYAX-yFut1&_nc_ht=scontent-bos3-1.xx&tp=14&oh=f56e3d3a9d70ce36035fa8916a24723d&oe=60E3AE69"
-            alt="Fixing drywall"
-          />
-        </div>
-      </div>
-    </div> -->
   </div>
 </div>
 
@@ -336,6 +184,43 @@
 <Footer />
 
 <style>
+  .jumbotron {
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.15) 0%,
+        rgba(0, 0, 0, 0.15) 100%
+      ),
+      radial-gradient(
+          at top center,
+          rgba(255, 255, 255, 0.4) 0%,
+          rgba(0, 0, 0, 0.4) 120%
+        )
+        #989898;
+    background-blend-mode: multiply, multiply;
+  }
+
+  .btn-grad {
+    background-image: linear-gradient(
+      to right,
+      #d7b732 0%,
+      #edde5d 51%,
+      #d7b732 100%
+    );
+  }
+  .btn-grad {
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: black;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+
   .rightImage {
     max-height: 600px;
     border-radius: 6px;
@@ -344,17 +229,6 @@
   .leftImage {
     max-height: 600px;
     border-radius: 6px;
-  }
-
-  .test {
-    background: rgb(34, 35, 40);
-    background: radial-gradient(
-      circle,
-      rgba(34, 35, 40, 1) 0%,
-      rgba(57, 58, 62, 1) 50%,
-      rgba(34, 35, 40, 1) 100%
-    );
-    box-shadow: 0 3px 10px #514513;
   }
   @media (max-width: 767px) {
     .rightImage,
