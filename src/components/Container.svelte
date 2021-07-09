@@ -7,7 +7,7 @@
 
 <div>
   <Nav />
-  <div class={`container ${maxWidth} mx-auto mt-24 p-2 md:p-0`}>
+  <div class={`container ${maxWidth} mx-auto mt-24 p-2 xl:p-0`}>
     <slot />
   </div>
   <Footer />

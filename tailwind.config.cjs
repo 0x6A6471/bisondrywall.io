@@ -18,6 +18,10 @@ const config = {
         gray100: '#E1E1E1',
         gray50: '#F7F7F7',
       },
+      screens: {
+        xs: '450px',
+        // => @media (min-width: 450px) { ... }
+      },
     },
   },
   plugins: [require('@tailwindcss/forms')],
