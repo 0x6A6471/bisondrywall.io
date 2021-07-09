@@ -24,8 +24,8 @@
             {/if}
           </div>
           <div class="ml-3 w-0 flex-1 pt-0.5">
-            <p class="text-sm font-medium text-gray-900">{heading}</p>
-            <p class="mt-1 text-sm text-gray-500">
+            <p class="text-sm font-medium text-900">{heading}</p>
+            <p class="mt-1 text-sm text-gray500">
               {text}
             </p>
           </div>
