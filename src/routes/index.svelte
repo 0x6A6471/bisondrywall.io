@@ -18,7 +18,7 @@
 <div class="jumbotron">
   <Nav linkColor="gray100" />
   <div
-    class="flex flex-col justify-center items-center h-full py-24 text-center"
+    class="flex flex-col justify-center items-center h-full py-32 text-center"
   >
     <h1 class="text-2xl md:text-4xl lg:text-6xl">Your Drywall Solution</h1>
     <h2 class="text-lg md:text-xl lg:text-2xl mt-2 text-gray800 font-normal">
@@ -35,10 +35,10 @@
 </div>
 
 <!-- First two grid sections -->
-<div class="py-16 overflow-hidden lg:py-24">
+<div class="py-16 lg:py-40 overflow-hidden">
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
     <div
-      class="relative mt-12 lg:mt-24 md:grid md:grid-cols-2 md:gap-8 md:items-center"
+      class="relative mb-16 lg:mb-40 md:grid md:grid-cols-2 md:gap-8 md:items-center"
     >
       <div class="relative">
         <h3 class="text-2xl font-extrabold tracking-tight sm:text-3xl">
@@ -64,9 +64,9 @@
 
       <div class="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
         <img
-          class="rightImage"
-          src="https://image.shutterstock.com/shutterstock/photos/1116716516/display_1500/stock-photo-building-drywall-ceiling-elements-for-led-lighting-caucasian-worker-patching-drywall-1116716516.jpg"
-          alt="plaster"
+          class="rightImage max-w-md grayscale"
+          src="/homepage/drywall-installation.jpg"
+          alt="Person installing drywall"
         />
       </div>
     </div>
@@ -108,9 +108,9 @@
 
         <div class="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
           <img
-            class="leftImage"
-            src="https://image.shutterstock.com/image-photo/construction-worker-assemble-suspended-ceiling-600w-794469577.jpg"
-            alt="Fixing drywall"
+            class="leftImage grayscale"
+            src="/homepage/drywall-plaster-repair.jpg"
+            alt="Drywall setup for final painting"
           />
         </div>
       </div>
@@ -120,12 +120,10 @@
 
 <Testomonials />
 
-<!-- Last two grid sections -->
-<div class="py-16 overflow-hidden lg:py-24">
+<!-- Last grid section -->
+<div class="py-16 lg:py-40 overflow-hidden">
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
-    <div
-      class="relative mt-12 lg:mt-24 md:grid md:grid-cols-2 md:gap-8 md:items-center"
-    >
+    <div class="relative md:grid md:grid-cols-2 md:gap-8 md:items-center">
       <div class="relative">
         <h3 class="text-2xl font-extrabold tracking-tight sm:text-3xl">
           Drywall finishing
@@ -150,9 +148,9 @@
 
       <div class="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
         <img
-          class="rightImage"
-          src="https://image.shutterstock.com/image-photo/construction-worker-puts-finishing-touch-600w-698339818.jpg"
-          alt="plaster"
+          class="rightImage max-w-md grayscale"
+          src="/homepage/drywall-finishing.jpg"
+          alt="Plaster finish on hung drywall"
         />
       </div>
     </div>
