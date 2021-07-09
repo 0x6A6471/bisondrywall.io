@@ -5,7 +5,7 @@ import supabase from '$lib/db';
  */
 export async function get() {
 
-	const jobs = await supabase.from('jobs').select(`id, position, description, status, pay`);
+	const jobs = await supabase.from('jobs').select(`*`).order('createdAt', { ascending: false });
 
 		return {
 			body: {

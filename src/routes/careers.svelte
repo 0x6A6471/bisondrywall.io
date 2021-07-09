@@ -56,9 +56,10 @@
   <div>
     <h3 class="text-xl md:text-2xl">Open positions</h3>
     {#if jobs.length > 0}
+      <hr class="border-t border-gray200 mt-4" />
       {#each jobs as job (job.id)}
         <div
-          class="flex justify-between items-center border-t border-b border-gray200 py-4 mt-8"
+          class="flex justify-between items-center py-4 border-b border-gray200"
         >
           <div>
             <h4 class="font-medium">{job.position}</h4>
@@ -79,7 +80,7 @@
         </div>
       {/each}
     {:else}
-      <p>There are currently no open positions</p>
+      <p class="pt-4">There are currently no open positions</p>
     {/if}
     <div class="mt-16">
       <h3 class="text-xl md:text-2xl">How to apply</h3>
