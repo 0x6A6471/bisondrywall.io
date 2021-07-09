@@ -73,9 +73,7 @@
     </h2>
   </div>
 
-  <div
-    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-24 lg:px-0"
-  >
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 lg:px-0">
     {#each photos as photo (photo.id)}
       <img
         class="rounded shadow-lg"
