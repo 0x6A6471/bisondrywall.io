@@ -10,6 +10,10 @@
         href="mailto:bisondrywallllc@gmail.com"
         class="mx-0 xs:mx-2 text-sm hover:text-gray700">Contact Us</a
       >
+      <a
+        href="https://m.facebook.com/bisondrywall"
+        class="mx-0 xs:mx-2 text-sm hover:text-gray700">Facebook</a
+      >
       <a href="/privacy" class="mx-0 xs:mx-2 text-sm hover:text-gray700"
         >Privacy</a
       >
