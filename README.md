@@ -4,8 +4,7 @@ A friend of mine, Ethan, started a Drywall company and asked for my help buildin
 
 ### Overview
 
-- `pages/api/things/*`: API routes for retrieving the 'internet things' destinations on the `/bookmarks` page.
-- `pages/api/jobs`: API route for retrieving available jobs on the `/jobs` page.
+- `pages/api/jobs`: API route for retrieving available jobs on the `/careers` page.
 - `pages/careers`: Retrieves information from `pages/api/jobs` to display jobs postings.
 - `pages/gallery`: Retrieves information from the Facebook Graph API to display all the photos. This prevents duplicate photo uploads for Ethan. Instead, upload to Facebook and they will automatically get pulled onto the website.
 - `pages/admin`: This is an authenticated route which displays a UI for Ethan to add or remove jobs.
