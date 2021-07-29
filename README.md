@@ -1,38 +1,37 @@
-# create-svelte
+# [bisondrywall.io](https://bisondrywall.io/)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+A friend of mine, Ethan, started a Drywall company and asked for my help building him a website. I used this as an opportunity to make it using technologies that I've become interested in but have never used. These two technologies are Svelte (SvelteKit) and Supabase.
 
-## Creating a project
+### Overview
 
-If you're seeing this, you've probably already done this step. Congrats!
+- `pages/api/things/*`: API routes for retrieving the 'internet things' destinations on the `/bookmarks` page.
+- `pages/api/jobs`: API route for retrieving available jobs on the `/jobs` page.
+- `pages/careers`: Retrieves information from `pages/api/jobs` to display jobs postings.
+- `pages/gallery`: Retrieves information from the Facebook Graph API to display all the photos. This prevents duplicate photo uploads for Ethan. Instead, upload to Facebook and they will automatically get pulled onto the website.
+- `pages/admin`: This is an authenticated route which displays a UI for Ethan to add or remove jobs.
+- `pages/*`: All other pages are static pages.
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+### Running Locally
 
-# create a new project in my-app
-npm init svelte@next my-app
+```
+$ git clone git@github.com:jakequinter/bisondrywall.io.git
+$ cd bisondrywall.io
+$ yarn
+$ yarn dev
 ```
 
-> Note: the `@next` is temporary
+Create a `.env.local` file similar to what is posted below:
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```
+VITE_SUPABASE_URL=
+VITE_SUPABASE_ANON_KEY=
+VITE_FACEBOOK_ACCESS_TOKEN=
 ```
 
-## Building
+### Built With
 
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+- [Vercel](https://vercel.com/)
+- [Next.js](https://nextjs.org/)
+- [Supabase](https://supabase.io/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Facebook Graph API](https://developers.facebook.com/docs/graph-api/)
