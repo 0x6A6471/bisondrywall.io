@@ -11,15 +11,17 @@
   async function login() {
     const { user, error: sbError } = await supabase.auth.signIn({
       email,
-      password,
+      password
     });
 
-    if (user?.email === 'hello@jakequinter.io') {
+    if (
+      user?.email === 'hello@jakequinter.io' ||
+      user?.email === 'bisondrywallllc@gmail.com'
+    ) {
       goto('/admin');
     }
 
     if (sbError) {
-      console.log('sberror', sbError);
       error = sbError.message;
       setTimeout(() => {
         error = '';

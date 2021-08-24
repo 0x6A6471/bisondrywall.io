@@ -24,7 +24,7 @@
       notification = {
         type: 'error',
         heading: 'Error creating job!',
-        text: 'Please make sure all the fields are filled in.',
+        text: 'Please make sure all the fields are filled in.'
       };
       setTimeout(() => {
         notification = undefined;
@@ -38,7 +38,7 @@
         notification = {
           type: 'success',
           heading: 'Successfully added!',
-          text: 'Your job has been added.',
+          text: 'Your job has been added.'
         };
         setTimeout(() => {
           notification = undefined;
@@ -91,12 +91,11 @@
             class="text-lg leading-6 font-medium text-gray900"
             id="modal-title"
           >
-            Add new Photo
+            Add new Job
           </h3>
           <div class="mt-2">
             <p class="text-sm text-gray500">
-              To add a new photo, copy the image address from Facebook and give
-              it meaningful alternate text.
+              To add a new job, fill out the information below.
             </p>
           </div>
         </div>
