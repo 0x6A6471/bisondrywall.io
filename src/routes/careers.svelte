@@ -22,8 +22,8 @@
     if (res.ok) {
       return {
         props: {
-          jobs: jobs.jobs.data,
-        },
+          jobs: jobs.jobs.data
+        }
       };
     }
   }
@@ -44,6 +44,10 @@
 
   export let jobs: Array<Job>;
 </script>
+
+<svelte:head>
+  <title>Careers</title>
+</svelte:head>
 
 <Container maxWidth="max-w-3xl">
   <div class="text-center mb-24">

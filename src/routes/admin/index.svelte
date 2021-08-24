@@ -95,6 +95,10 @@
   }
 </script>
 
+<svelte:head>
+  <title>Admin | Jobs</title>
+</svelte:head>
+
 {#if notification}
   <Notification
     type={notification.type}

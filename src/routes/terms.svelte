@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Terms of Service</title>
+</svelte:head>
+
 <div class="max-w-5xl mx-auto my-24 px-2 xl:px-0">
   <div data-custom-class="body">
     <div align="center" style="text-align: left; line-height: 1;">

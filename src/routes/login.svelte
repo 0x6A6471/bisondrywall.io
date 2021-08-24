@@ -30,6 +30,10 @@
   }
 </script>
 
+<svelte:head>
+  <title>Login</title>
+</svelte:head>
+
 {#if error}
   <Notification type="error" heading="Error occured!" text={error} />
 {/if}
