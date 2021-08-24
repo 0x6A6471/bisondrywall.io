@@ -20,8 +20,8 @@
     if (res.ok) {
       return {
         props: {
-          jobs: jobs.jobs.data,
-        },
+          jobs: jobs.jobs.data
+        }
       };
     }
   }
@@ -59,7 +59,7 @@
   export let jobs: Array<Job>;
   let notification: Notification | undefined;
   let isShow: boolean = false;
-  console.log('hno', notification);
+
   async function handleDelete(id: string) {
     const { error } = await supabase.from('jobs').delete().match({ id: id });
 
@@ -67,7 +67,7 @@
       notification = {
         type: 'success',
         heading: 'Successfully deleted!',
-        text: 'Your job has been removed.',
+        text: 'Your job has been removed.'
       };
       refetchJobs();
       setTimeout(() => {
@@ -77,7 +77,7 @@
       notification = {
         type: 'error',
         heading: 'Error deleting job!',
-        text: error.message,
+        text: error.message
       };
       setTimeout(() => {
         notification = undefined;
@@ -94,6 +94,10 @@
     jobs = data.jobs.data;
   }
 </script>
+
+<svelte:head>
+  <title>Admin | Jobs</title>
+</svelte:head>
 
 {#if notification}
   <Notification

@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Privacy</title>
+</svelte:head>
+
 <div class="max-w-5xl mx-auto my-24 px-2 xl:px-0">
   <div data-custom-class="body">
     <div>
