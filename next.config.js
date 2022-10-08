@@ -7,6 +7,7 @@ const nextConfig = {
       'scontent-bos5-1.xx.fbcdn.net',
       'scontent-iad3-2.xx.fbcdn.net',
       'scontent-lga3-1.xx.fbcdn.net',
+      'images.unsplash.com',
     ],
   },
 };

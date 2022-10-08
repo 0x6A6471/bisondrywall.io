@@ -5,7 +5,7 @@ import testomonials from '../data/testomonials';
 
 export default function Testomonials() {
   return (
-    <div>
+    <div className="mx-auto max-w-screen-xl px-8 xl:px-0">
       <h2 className="mb-8 text-center text-3xl font-bold text-gray-50 md:mb-16 md:text-5xl">
         Loved by the people of Wisconsin
       </h2>

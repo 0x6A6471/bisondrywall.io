@@ -4,52 +4,11 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import Footer from '../src/components/Footer';
-import MotionLink from '../src/components/shared/MotionLink';
 import OfferCards from '../src/components/OfferCards';
+import PhotosMarquee from '../src/components/PhotosMarquee';
 import Testomonials from '../src/components/Testomonials';
 
-type Image = {
-  height: number;
-  width: number;
-  source: string;
-};
-
-type Data = {
-  id: number;
-  alt_text: string;
-  link: string;
-  images: Image[];
-};
-
-type Props = {
-  firstPhotos: Data[];
-  secondPhotos: Data[];
-};
-
 const Home: NextPage = () => {
-  const [firstPhotos, setFirstPhotos] = useState<Data[]>([]);
-  const [secondPhotos, setSecondPhotos] = useState<Data[]>([]);
-
-  useEffect(() => {
-    const fetchFacebookPhotos = async () => {
-      const response = await fetch(
-        'https://graph.facebook.com/112096071040835/photos?limit=100&fields=link,alt_text,images',
-        {
-          method: 'GET',
-          headers: {
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_FACEBOOK_ACCESS_TOKEN}`,
-          },
-        }
-      );
-
-      const photos = await response.json();
-      setFirstPhotos(photos.data.slice(0, 50));
-      setSecondPhotos(photos.data.slice(50));
-    };
-
-    fetchFacebookPhotos();
-  }, []);
-
   return (
     <>
       <Head>
@@ -78,54 +37,9 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <main className="mx-auto mt-8 w-full max-w-screen-xl space-y-24 px-8 md:mt-16 md:space-y-48 xl:px-0">
+      <main className="mt-8 w-full space-y-24 md:mt-16 md:space-y-48">
         <OfferCards />
-
-        <div>
-          <h2 className="mb-8 text-center text-3xl font-bold text-gray-50 md:mb-16 md:max-w-xl md:text-left md:text-5xl">
-            Take a look at some before, during, and afer photos of our work
-          </h2>
-
-          <div className="flex overflow-x-auto ">
-            <div className=" flex flex-col">
-              <div className="flex gap-2">
-                {firstPhotos.map(photo => (
-                  <div key={photo.id} className="relative mr-4">
-                    <Image
-                      className="rounded-xl"
-                      key={photo.id}
-                      src={photo.images[0].source}
-                      height="400"
-                      width="300"
-                      alt="Bison Drywall photo"
-                      layout="fixed"
-                    />
-                  </div>
-                ))}
-              </div>
-              <div className="flex gap-2">
-                {secondPhotos.map(photo => (
-                  <div key={photo.id} className="relative mr-4">
-                    <Image
-                      className="rounded-xl"
-                      key={photo.id}
-                      src={photo.images[0].source}
-                      height="400"
-                      width="300"
-                      alt="Bison Drywall photo"
-                      layout="fixed"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <MotionLink
-            href="https://m.facebook.com/bisondrywall"
-            label="Check us out on Facebook"
-          />
-        </div>
+        <PhotosMarquee />
         <Testomonials />
       </main>
 
@@ -169,6 +83,28 @@ const Home: NextPage = () => {
               #161616 55%
             );
           }
+        }
+
+        .marquee {
+          position: relative;
+          width: 100vw;
+          max-width: 100%;
+          overflow-x: hidden;
+        }
+
+        .track {
+          position: absolute;
+          white-space: nowrap;
+        }
+
+        .track > h1 {
+          margin: 20px 0;
+          font-size: 8rem;
+          font-family: Antonio;
+          -webkit-text-fill-color: rgba(255, 255, 255, 0);
+          -webkit-text-stroke-width: 2px;
+          -webkit-text-stroke-color: #f4955c;
+          text-transform: uppercase;
         }
       `}</style>
     </>

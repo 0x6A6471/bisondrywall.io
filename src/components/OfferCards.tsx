@@ -2,7 +2,7 @@ import offerings from '../data/offerings';
 
 export default function OfferCards() {
   return (
-    <div>
+    <div className="mx-auto max-w-screen-xl px-8 xl:px-0">
       <h2 className="mb-8 text-center text-3xl font-bold text-gray-50 md:mb-16 md:text-5xl">
         What we offer
       </h2>
