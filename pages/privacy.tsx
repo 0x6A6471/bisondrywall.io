@@ -438,16 +438,16 @@ const Privacy: NextPage = () => {
 
           <p>
             Most web browsers and some mobile operating systems and mobile
-            applications include a Do-Not-Track ("DNT") feature or setting you
-            can activate to signal your privacy preference not to have data
-            about your online browsing activities monitored and collected. At
-            this stage no uniform technology standard for recognizing and
-            implementing DNT signals has been finalized. As such, we do not
-            currently respond to DNT browser signals or any other mechanism that
-            automatically communicates your choice not to be tracked online. If
-            a standard for online tracking is adopted that we must follow in the
-            future, we will inform you about that practice in a revised version
-            of this privacy notice.
+            applications include a Do-Not-Track (&quot;DNT&quot;) feature or
+            setting you can activate to signal your privacy preference not to
+            have data about your online browsing activities monitored and
+            collected. At this stage no uniform technology standard for
+            recognizing and implementing DNT signals has been finalized. As
+            such, we do not currently respond to DNT browser signals or any
+            other mechanism that automatically communicates your choice not to
+            be tracked online. If a standard for online tracking is adopted that
+            we must follow in the future, we will inform you about that practice
+            in a revised version of this privacy notice.
           </p>
         </section>
 
@@ -497,10 +497,10 @@ const Privacy: NextPage = () => {
 
           <p>
             We may update this privacy notice from time to time. The updated
-            version will be indicated by an updated "Revised" date and the
-            updated version will be effective as soon as it is accessible. If we
-            make material changes to this privacy notice, we may notify you
-            either by prominently posting a notice of such changes or by
+            version will be indicated by an updated &quot;Revised&quot; date and
+            the updated version will be effective as soon as it is accessible.
+            If we make material changes to this privacy notice, we may notify
+            you either by prominently posting a notice of such changes or by
             directly sending you a notification. We encourage you to review this
             privacy notice frequently to be informed of how we are protecting
             your information.
