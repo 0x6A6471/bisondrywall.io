@@ -1,5 +1,6 @@
 import { Star } from 'phosphor-react';
 
+import MotionLink from './shared/MotionLink';
 import testomonials from '../data/testomonials';
 
 export default function Testomonials() {
@@ -35,6 +36,11 @@ export default function Testomonials() {
           </div>
         ))}
       </div>
+
+      <MotionLink
+        href="https://www.google.com/search?q=bisondrywall+appleton+wi&sourceid=chrome&ie=UTF-8#lrd=0x8803b936501f9d47:0x39d4b236558d2ad4,1,,,"
+        label="View all reviews"
+      />
     </div>
   );
 }

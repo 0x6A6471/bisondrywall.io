@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
-import type { GetStaticProps, NextPage } from 'next';
+import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 
+import Footer from '../src/components/Footer';
+import MotionLink from '../src/components/shared/MotionLink';
 import OfferCards from '../src/components/OfferCards';
 import Testomonials from '../src/components/Testomonials';
 
@@ -45,7 +47,7 @@ const Home: NextPage = () => {
       setSecondPhotos(photos.data.slice(50));
     };
 
-    fetchFacebookPhotos();
+    // fetchFacebookPhotos();
   }, []);
 
   return (
@@ -60,7 +62,7 @@ const Home: NextPage = () => {
         <div className="p-4">
           <Image
             src="/static/images/logo.png"
-            alt="Bison Drywall"
+            alt="Bison Drywall logo"
             width={94}
             height={40}
           />
@@ -76,7 +78,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <main className="mx-auto mt-16 w-full max-w-screen-xl space-y-24 px-8 md:mt-48 md:space-y-48 xl:px-0">
+      <main className="mx-auto mt-8 w-full max-w-screen-xl space-y-24 px-8 md:mt-16 md:space-y-48 xl:px-0">
         <OfferCards />
 
         <div>
@@ -95,7 +97,7 @@ const Home: NextPage = () => {
                       src={photo.images[0].source}
                       height="400"
                       width="300"
-                      alt="1"
+                      alt="Bison Drywall photo"
                       layout="fixed"
                     />
                   </div>
@@ -110,7 +112,7 @@ const Home: NextPage = () => {
                       src={photo.images[0].source}
                       height="400"
                       width="300"
-                      alt="1"
+                      alt="Bison Drywall photo"
                       layout="fixed"
                     />
                   </div>
@@ -118,9 +120,16 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
+
+          <MotionLink
+            href="https://m.facebook.com/bisondrywall"
+            label="Check us out on Facebook"
+          />
         </div>
         <Testomonials />
       </main>
+
+      <Footer />
 
       <style jsx>{`
         .jumbotron {
@@ -128,8 +137,38 @@ const Home: NextPage = () => {
           background: radial-gradient(
             circle at 50% -50%,
             #ddc253 0%,
-            #161616 80%
+            #161616 90%
           );
+        }
+
+        @media (min-width: 767px) {
+          .jumbotron {
+            background: radial-gradient(
+              circle at 50% -50%,
+              #ddc253 0%,
+              #161616 80%
+            );
+          }
+        }
+
+        @media (min-width: 1280px) {
+          .jumbotron {
+            background: radial-gradient(
+              circle at 50% -50%,
+              #ddc253 0%,
+              #161616 70%
+            );
+          }
+        }
+
+        @media (min-width: 1536px) {
+          .jumbotron {
+            background: radial-gradient(
+              circle at 50% -50%,
+              #ddc253 0%,
+              #161616 55%
+            );
+          }
         }
       `}</style>
     </>
@@ -137,24 +176,3 @@ const Home: NextPage = () => {
 };
 
 export default Home;
-
-// export const getStaticProps: GetStaticProps = async () => {
-//   const response = await fetch(
-//     'https://graph.facebook.com/112096071040835/photos?limit=100&fields=link,alt_text,images',
-//     {
-//       method: 'GET',
-//       headers: {
-//         Authorization: `Bearer ${process.env.NEXT_PUBLIC_FACEBOOK_ACCESS_TOKEN}`,
-//       },
-//     }
-//   );
-
-//   const photos = await response.json();
-
-//   return {
-//     props: {
-//       firstPhotos: photos.data.slice(0, 50),
-//       secondPhotos: photos.data.slice(50),
-//     },
-//   };
-// };
