@@ -47,7 +47,7 @@ const Home: NextPage = () => {
       setSecondPhotos(photos.data.slice(50));
     };
 
-    // fetchFacebookPhotos();
+    fetchFacebookPhotos();
   }, []);
 
   return (
