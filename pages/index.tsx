@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from 'next';
+import type { GetStaticProps, GetServerSideProps, NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 
@@ -25,8 +25,6 @@ type Props = {
 };
 
 const Home: NextPage<Props> = ({ firstPhotos, secondPhotos }) => {
-  console.log(firstPhotos);
-  console.log(secondPhotos);
   return (
     <>
       <Head>
@@ -55,11 +53,11 @@ const Home: NextPage<Props> = ({ firstPhotos, secondPhotos }) => {
         </div>
       </div>
 
-      <main className="mx-auto mt-48 w-full max-w-screen-xl space-y-48 px-8 xl:px-0">
+      <main className="mx-auto mt-16 w-full max-w-screen-xl space-y-24 px-8 md:mt-48 md:space-y-48 xl:px-0">
         <OfferCards />
 
         <div>
-          <h2 className="mb-16 max-w-lg text-5xl font-bold text-gray-50">
+          <h2 className="mb-8 text-center text-3xl font-bold text-gray-50 md:mb-16 md:max-w-xl md:text-left md:text-5xl">
             Take a look at some before, during, and afer photos of our work
           </h2>
 
@@ -117,7 +115,7 @@ const Home: NextPage<Props> = ({ firstPhotos, secondPhotos }) => {
 
 export default Home;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const response = await fetch(
     'https://graph.facebook.com/112096071040835/photos?limit=100&fields=link,alt_text,images',
     {
