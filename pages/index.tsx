@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 
@@ -24,27 +24,29 @@ type Props = {
   secondPhotos: Data[];
 };
 
-const Home: NextPage<Props> = () => {
-  const [firstPhotos, setFirstPhotos] = useState<Data[]>([]);
-  const [secondPhotos, setSecondPhotos] = useState<Data[]>([]);
+const Home: NextPage<Props> = ({ firstPhotos, secondPhotos }) => {
+  // const [firstPhotos, setFirstPhotos] = useState<Data[]>([]);
+  // const [secondPhotos, setSecondPhotos] = useState<Data[]>([]);
 
-  useEffect(() => {
-    const fetchFacebookPhotos = async () => {
-      const response = await fetch(
-        'https://graph.facebook.com/112096071040835/photos?limit=100&fields=link,alt_text,images',
-        {
-          method: 'GET',
-          headers: {
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_FACEBOOK_ACCESS_TOKEN}`,
-          },
-        }
-      );
+  // useEffect(() => {
+  //   const fetchFacebookPhotos = async () => {
+  //     const response = await fetch(
+  //       'https://graph.facebook.com/112096071040835/photos?limit=100&fields=link,alt_text,images',
+  //       {
+  //         method: 'GET',
+  //         headers: {
+  //           Authorization: `Bearer ${process.env.NEXT_PUBLIC_FACEBOOK_ACCESS_TOKEN}`,
+  //         },
+  //       }
+  //     );
 
-      const photos = await response.json();
-      setFirstPhotos(photos.data.slice(0, 50));
-      setSecondPhotos(photos.data.slice(50));
-    };
-  }, []);
+  //     const photos = await response.json();
+  //     setFirstPhotos(photos.data.slice(0, 50));
+  //     setSecondPhotos(photos.data.slice(50));
+  //   };
+
+  //   fetchFacebookPhotos();
+  // }, []);
 
   return (
     <>
@@ -136,23 +138,23 @@ const Home: NextPage<Props> = () => {
 
 export default Home;
 
-// export const getServerSideProps: GetServerSideProps = async () => {
-//   const response = await fetch(
-//     'https://graph.facebook.com/112096071040835/photos?limit=100&fields=link,alt_text,images',
-//     {
-//       method: 'GET',
-//       headers: {
-//         Authorization: `Bearer ${process.env.NEXT_PUBLIC_FACEBOOK_ACCESS_TOKEN}`,
-//       },
-//     }
-//   );
+export const getStaticProps: GetStaticProps = async () => {
+  const response = await fetch(
+    'https://graph.facebook.com/112096071040835/photos?limit=100&fields=link,alt_text,images',
+    {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_FACEBOOK_ACCESS_TOKEN}`,
+      },
+    }
+  );
 
-//   const photos = await response.json();
+  const photos = await response.json();
 
-//   return {
-//     props: {
-//       firstPhotos: photos.data.slice(0, 50),
-//       secondPhotos: photos.data.slice(50),
-//     },
-//   };
-// };
+  return {
+    props: {
+      firstPhotos: photos.data.slice(0, 50),
+      secondPhotos: photos.data.slice(50),
+    },
+  };
+};
