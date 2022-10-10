@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowRight } from 'phosphor-react';
 
 import Footer from '../src/components/Footer';
 import OfferCards from '../src/components/OfferCards';
@@ -27,13 +28,20 @@ const Home: NextPage = () => {
           />
         </div>
 
-        <div className="pt-24">
-          <h1 className="text-center text-7xl font-bold text-white">
+        <div className="px-8 pt-24 text-center sm:px-0">
+          <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-7xl">
             Bison Drywall
           </h1>
-          <h2 className="text-center text-2xl text-white opacity-50">
+          <h2 className="mt-2 text-lg text-white opacity-50 md:text-2xl">
             Whatever your needs, Bison Drywall can help
           </h2>
+
+          <Link href="mailto:bisondrywalllc.com" passHref>
+            <a className="btn-grad mt-8 inline-flex items-center rounded-xl px-8 py-4 font-medium text-white md:mt-16">
+              Contact us
+              <ArrowRight className="ml-4 inline" size={20} />
+            </a>
+          </Link>
         </div>
       </div>
 
@@ -85,26 +93,21 @@ const Home: NextPage = () => {
           }
         }
 
-        .marquee {
-          position: relative;
-          width: 100vw;
-          max-width: 100%;
-          overflow-x: hidden;
+        .btn-grad {
+          background-image: linear-gradient(
+            to right,
+            #86721f 0%,
+            #d7b732 51%,
+            #86721f 100%
+          );
+          transition: 0.5s;
+          background-size: 200% auto;
+          box-shadow: 0 0 20px #201e12;
         }
 
-        .track {
-          position: absolute;
-          white-space: nowrap;
-        }
-
-        .track > h1 {
-          margin: 20px 0;
-          font-size: 8rem;
-          font-family: Antonio;
-          -webkit-text-fill-color: rgba(255, 255, 255, 0);
-          -webkit-text-stroke-width: 2px;
-          -webkit-text-stroke-color: #f4955c;
-          text-transform: uppercase;
+        .btn-grad:hover {
+          background-position: right center; /* change the direction of the change here */
+          text-decoration: none;
         }
       `}</style>
     </>
