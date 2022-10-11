@@ -19,7 +19,7 @@ type Data = {
 
 const marqueeVariants = {
   animate: {
-    x: [0, -15400],
+    // x: [0, -15400],
     transition: {
       x: {
         repeat: Infinity,
@@ -48,7 +48,6 @@ export default function PhotosMarquee() {
       );
 
       const photos = await response.json();
-      console.log('fetchFacebookPhotos', photos);
 
       if (photos.data) {
         setFirstPhotos(photos.data.slice(0, 50));
@@ -62,11 +61,11 @@ export default function PhotosMarquee() {
   return (
     <div className="8">
       <h2 className="mb-8 text-center text-3xl font-bold text-gray-50 md:mb-16 md:max-w-xl md:px-8 md:text-left md:text-5xl">
-        Take a look at some before, during, and afer photos of our work
+        Take a look at some before, during, and after photos of our work
       </h2>
 
       <div className="flex overflow-x-auto ">
-        <div className="marquee">
+        <div>
           <motion.div
             className="track"
             variants={marqueeVariants}
