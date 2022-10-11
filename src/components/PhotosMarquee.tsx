@@ -19,7 +19,7 @@ type Data = {
 
 const marqueeVariants = {
   animate: {
-    // x: [0, -15400],
+    x: [0, -15400],
     transition: {
       x: {
         repeat: Infinity,
@@ -43,6 +43,7 @@ export default function PhotosMarquee() {
           method: 'GET',
           headers: {
             Authorization: `Bearer ${process.env.NEXT_PUBLIC_FACEBOOK_ACCESS_TOKEN}`,
+            'Content-Type': 'application/json',
           },
         }
       );
