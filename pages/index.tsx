@@ -2,8 +2,9 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight } from 'phosphor-react';
+import { PaperPlaneTilt } from 'phosphor-react';
 
+import Callout from '../src/components/Callout';
 import Footer from '../src/components/Footer';
 import OfferCards from '../src/components/OfferCards';
 import PhotosMarquee from '../src/components/PhotosMarquee';
@@ -39,7 +40,7 @@ const Home: NextPage = () => {
           <Link href="mailto:bisondrywalllc.com" passHref>
             <a className="btn-grad mt-8 inline-flex items-center rounded-xl px-8 py-4 font-medium text-white md:mt-16">
               Contact us
-              <ArrowRight className="ml-4 inline" size={20} />
+              <PaperPlaneTilt className="ml-4 inline" size={20} />
             </a>
           </Link>
         </div>
@@ -49,6 +50,7 @@ const Home: NextPage = () => {
         <OfferCards />
         <PhotosMarquee />
         <Testomonials />
+        <Callout />
       </main>
 
       <Footer />

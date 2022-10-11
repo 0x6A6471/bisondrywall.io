@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-import { images, images2 } from '../data/delete';
 import MotionLink from './shared/MotionLink';
 
 type Image = {
@@ -57,7 +56,7 @@ export default function PhotosMarquee() {
       }
     };
 
-    fetchFacebookPhotos();
+    // fetchFacebookPhotos();
   }, []);
 
   return (
