@@ -49,21 +49,24 @@ export default function PhotosMarquee() {
       );
 
       const photos = await response.json();
+      console.log('photos', photos);
 
-      setFirstPhotos(photos.data.slice(0, 50));
-      setSecondPhotos(photos.data.slice(50));
+      if (photos?.data) {
+        setFirstPhotos(photos.data.slice(0, 50));
+        setSecondPhotos(photos.data.slice(50));
+      }
     };
 
     fetchFacebookPhotos();
   }, []);
-
+  console.log('firstPhotos', firstPhotos);
   return (
     <div className="8">
       <h2 className="mb-8 text-center text-3xl font-bold text-gray-50 md:mb-16 md:max-w-xl md:px-8 md:text-left md:text-5xl">
         Take a look at some before, during, and after photos of our work
       </h2>
 
-      <div className="flex overflow-x-auto ">
+      <div className="flex ">
         <div>
           <motion.div
             className="track"
@@ -80,7 +83,6 @@ export default function PhotosMarquee() {
                     width="300"
                     alt="Bison Drywall photo"
                     layout="fixed"
-                    priority={true}
                   />
                 </div>
               ))}
@@ -95,7 +97,6 @@ export default function PhotosMarquee() {
                     width="300"
                     alt="Bison Drywall photo"
                     layout="fixed"
-                    priority={true}
                   />
                 </div>
               ))}
