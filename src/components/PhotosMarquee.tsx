@@ -56,7 +56,7 @@ export default function PhotosMarquee() {
       }
     };
 
-    // fetchFacebookPhotos();
+    fetchFacebookPhotos();
   }, []);
 
   return (
