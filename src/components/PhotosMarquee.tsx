@@ -82,6 +82,7 @@ export default function PhotosMarquee() {
                     width="300"
                     alt="Bison Drywall photo"
                     layout="fixed"
+                    priority={true}
                   />
                 </div>
               ))}
