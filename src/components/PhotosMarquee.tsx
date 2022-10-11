@@ -49,10 +49,8 @@ export default function PhotosMarquee() {
 
       const photos = await response.json();
 
-      if (photos.data) {
-        setFirstPhotos(photos.data.slice(0, 50));
-        setSecondPhotos(photos.data.slice(50));
-      }
+      setFirstPhotos(photos.data.slice(0, 50));
+      setSecondPhotos(photos.data.slice(50));
     };
 
     fetchFacebookPhotos();
