@@ -49,7 +49,6 @@ export default function PhotosMarquee() {
       );
 
       const photos = await response.json();
-      console.log('photos', photos);
 
       if (photos?.data) {
         setFirstPhotos(photos.data.slice(0, 50));
@@ -59,7 +58,7 @@ export default function PhotosMarquee() {
 
     fetchFacebookPhotos();
   }, []);
-  console.log('firstPhotos', firstPhotos);
+
   return (
     <div className="8">
       <h2 className="mb-8 text-center text-3xl font-bold text-gray-50 md:mb-16 md:max-w-xl md:px-8 md:text-left md:text-5xl">
@@ -76,13 +75,13 @@ export default function PhotosMarquee() {
             <div className="flex gap-2">
               {firstPhotos.map(photo => (
                 <div key={photo.id} className="relative">
-                  <Image
+                  <img
                     className="rounded-xl"
                     src={photo.images[0].source}
                     height="400"
                     width="300"
                     alt="Bison Drywall photo"
-                    layout="fixed"
+                    // layout="fixed"
                   />
                 </div>
               ))}
@@ -90,13 +89,13 @@ export default function PhotosMarquee() {
             <div className="flex gap-2">
               {secondPhotos.map(photo => (
                 <div key={photo.id} className="relative">
-                  <Image
+                  <img
                     className="rounded-xl"
                     src={photo.images[0].source}
                     height="400"
                     width="300"
                     alt="Bison Drywall photo"
-                    layout="fixed"
+                    // layout="fixed"
                   />
                 </div>
               ))}
