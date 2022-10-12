@@ -69,13 +69,13 @@ export default function PhotosMarquee() {
         <div>
           <motion.div
             className="track"
-            variants={marqueeVariants}
+            // variants={marqueeVariants}
             animate="animate"
           >
-            <div className="flex gap-2">
+            <div className="mb-2 flex gap-2">
               {firstPhotos.map(photo => (
                 <div key={photo.id} className="relative">
-                  <img
+                  <Image
                     className="rounded-xl"
                     src={photo.images[0].source}
                     height="400"
@@ -86,10 +86,10 @@ export default function PhotosMarquee() {
                 </div>
               ))}
             </div>
-            <div className="flex gap-2">
+            <div className="mb-2 flex gap-2">
               {secondPhotos.map(photo => (
                 <div key={photo.id} className="relative">
-                  <img
+                  <Image
                     className="rounded-xl"
                     src={photo.images[0].source}
                     height="400"
