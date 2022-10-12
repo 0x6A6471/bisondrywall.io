@@ -65,11 +65,11 @@ export default function PhotosMarquee() {
         Take a look at some before, during, and after photos of our work
       </h2>
 
-      <div className="flex ">
+      <div className="flex overflow-x-hidden">
         <div>
           <motion.div
             className="track"
-            // variants={marqueeVariants}
+            variants={marqueeVariants}
             animate="animate"
           >
             <div className="mb-2 flex gap-2">
@@ -81,7 +81,7 @@ export default function PhotosMarquee() {
                     height="400"
                     width="300"
                     alt="Bison Drywall photo"
-                    // layout="fixed"
+                    layout="fixed"
                   />
                 </div>
               ))}
@@ -95,7 +95,7 @@ export default function PhotosMarquee() {
                     height="400"
                     width="300"
                     alt="Bison Drywall photo"
-                    // layout="fixed"
+                    layout="fixed"
                   />
                 </div>
               ))}
