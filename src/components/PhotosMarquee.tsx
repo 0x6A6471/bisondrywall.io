@@ -1,21 +1,8 @@
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
+import { Data } from '../types/photos';
 import MotionLink from './shared/MotionLink';
-
-type Image = {
-  height: number;
-  width: number;
-  source: string;
-};
-
-type Data = {
-  id: number;
-  alt_text: string;
-  link: string;
-  images: Image[];
-};
 
 const marqueeVariants = {
   animate: {
@@ -31,34 +18,12 @@ const marqueeVariants = {
   },
 };
 
-export default function PhotosMarquee() {
-  const [firstPhotos, setFirstPhotos] = useState<Data[]>([]);
-  const [secondPhotos, setSecondPhotos] = useState<Data[]>([]);
+type Props = {
+  topPhotos: Data[];
+  bottomPhotos: Data[];
+};
 
-  useEffect(() => {
-    const fetchFacebookPhotos = async () => {
-      const response = await fetch(
-        'https://graph.facebook.com/112096071040835/photos?limit=100&fields=link,alt_text,images',
-        {
-          method: 'GET',
-          headers: {
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_FACEBOOK_ACCESS_TOKEN}`,
-            'Content-Type': 'application/json',
-          },
-        }
-      );
-
-      const photos = await response.json();
-
-      if (photos?.data) {
-        setFirstPhotos(photos.data.slice(0, 50));
-        setSecondPhotos(photos.data.slice(50));
-      }
-    };
-
-    fetchFacebookPhotos();
-  }, []);
-
+export default function PhotosMarquee({ topPhotos, bottomPhotos }: Props) {
   return (
     <div className="8">
       <h2 className="mb-8 text-center text-3xl font-bold text-gray-50 md:mb-16 md:max-w-xl md:px-8 md:text-left md:text-5xl">
@@ -73,7 +38,7 @@ export default function PhotosMarquee() {
             animate="animate"
           >
             <div className="mb-2 flex gap-2">
-              {firstPhotos.map(photo => (
+              {topPhotos.map(photo => (
                 <div key={photo.id} className="relative">
                   <Image
                     className="rounded-xl"
@@ -87,7 +52,7 @@ export default function PhotosMarquee() {
               ))}
             </div>
             <div className="mb-2 flex gap-2">
-              {secondPhotos.map(photo => (
+              {bottomPhotos.map(photo => (
                 <div key={photo.id} className="relative">
                   <Image
                     className="rounded-xl"

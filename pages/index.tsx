@@ -1,16 +1,22 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PaperPlaneTilt } from 'phosphor-react';
 
+import { Data } from '../src/types/photos';
 import Callout from '../src/components/Callout';
 import Footer from '../src/components/Footer';
 import OfferCards from '../src/components/OfferCards';
 import PhotosMarquee from '../src/components/PhotosMarquee';
 import Testomonials from '../src/components/Testomonials';
 
-const Home: NextPage = () => {
+type Props = {
+  topPhotos: Data[];
+  bottomPhotos: Data[];
+};
+
+const Home: NextPage<Props> = ({ topPhotos, bottomPhotos }) => {
   return (
     <>
       <Head>
@@ -48,7 +54,7 @@ const Home: NextPage = () => {
 
       <main className="mt-8 w-full space-y-24 md:mt-16 md:space-y-48">
         <OfferCards />
-        <PhotosMarquee />
+        <PhotosMarquee topPhotos={topPhotos} bottomPhotos={bottomPhotos} />
         <Testomonials />
         <Callout />
       </main>
@@ -117,3 +123,28 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const response = await fetch(
+    'https://graph.facebook.com/112096071040835/photos?limit=100&fields=link,alt_text,images',
+    {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_FACEBOOK_ACCESS_TOKEN}`,
+        'Content-Type': 'application/json',
+      },
+    }
+  );
+
+  const photos = await response.json();
+
+  const topPhotos = photos.data.slice(0, 50);
+  const bottomPhotos = photos.data.slice(50);
+
+  return {
+    props: {
+      topPhotos,
+      bottomPhotos,
+    },
+  };
+};
