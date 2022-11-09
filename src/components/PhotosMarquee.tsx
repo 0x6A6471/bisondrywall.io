@@ -47,6 +47,7 @@ export default function PhotosMarquee({ topPhotos, bottomPhotos }: Props) {
                     width="300"
                     alt="Bison Drywall photo"
                     layout="fixed"
+                    priority={true}
                   />
                 </div>
               ))}
@@ -61,6 +62,7 @@ export default function PhotosMarquee({ topPhotos, bottomPhotos }: Props) {
                     width="300"
                     alt="Bison Drywall photo"
                     layout="fixed"
+                    priority={true}
                   />
                 </div>
               ))}
