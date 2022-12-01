@@ -17,7 +17,7 @@ const Privacy: NextPage = () => {
           <h1 className="text-3xl font-bold uppercase text-white md:text-5xl">
             Privacy notice
           </h1>
-          <p>Last updated July 06, 2021</p>
+          <p>Last updated December 01, 2022</p>
         </div>
         <section className="space-y-4">
           <div>
@@ -163,7 +163,7 @@ const Privacy: NextPage = () => {
                   To send administrative information to you.
                 </span>{' '}
                 We may use your personal information to send you product,
-                service and new feature information and/or information aboiut
+                service and new feature information and/or information about
                 changes to our terms, conditions, and policies.
               </li>
               <li>

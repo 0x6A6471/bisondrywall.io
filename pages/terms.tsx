@@ -17,7 +17,7 @@ const Terms: NextPage = () => {
           <h1 className="text-3xl font-bold uppercase text-white md:text-5xl">
             Terms of use
           </h1>
-          <p>Last updated July 06, 2021</p>
+          <p>Last updated December 01, 2022</p>
         </div>
 
         <section className="space-y-4">
@@ -158,7 +158,7 @@ const Terms: NextPage = () => {
 
         <section className="space-y-4">
           <h2 className="mb-8 text-xl font-bold uppercase text-white md:text-2xl">
-            Prohibited activites
+            Prohibited activties
           </h2>
 
           <ol className="ml-8 list-outside list-decimal space-y-1">
@@ -685,7 +685,7 @@ const Terms: NextPage = () => {
 
         <section className="space-y-4">
           <h2 className="mb-8 text-xl font-bold uppercase text-white md:text-2xl">
-            Idemnification
+            Identification
           </h2>
 
           <p>
