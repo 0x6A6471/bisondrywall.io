@@ -22,9 +22,9 @@ const offerings = [
       {
         id: 1.2,
         icon: <Buildings color="#D7B732" size={30} />,
-        label: 'Commerical',
+        label: 'Commercial',
         description:
-          'Looking for upgrades to the office? We help proffessional businesses with additions and upgrade their suites.',
+          'Looking for upgrades to the office? We help professional businesses with additions and upgrade their suites.',
       },
     ],
   },
