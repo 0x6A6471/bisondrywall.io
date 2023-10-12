@@ -1,0 +1,5 @@
+
+(executable
+ (public_name bisondrywall_io)
+ (name main)
+ (libraries bisondrywall_io dream tyxml))
