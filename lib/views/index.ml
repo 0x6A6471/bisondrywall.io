@@ -50,11 +50,11 @@ let home_page _ =
     html
       (head
          (title (txt "Bison Drywall"))
-         [ link ~rel:[ `Stylesheet ] ~href:"/styles/global.css" ()
+         [ link ~rel:[ `Stylesheet ] ~href:"/styles/output.css" ()
            (* ; script ~a:[ a_src "https://cdn.tailwindcss.com" ] (txt "") *)
          ])
       (body
-         ~a:[ a_class [ "bg-[#161616] text-base text-gray-100 md:text-lg" ] ]
+         ~a:[ a_class [ "bg-gray-900 text-base text-gray-100 md:text-lg" ] ]
          [ home_body () ])
   in
   Dream.html (Ty.elt_to_string page)

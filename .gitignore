@@ -31,8 +31,8 @@ _opam/
 
 # Don't keep bundled JS files in the repo, since they change
 tailwindcss
-www/static/*.dist.js
-www/static/build.css
+styles/*.dist.js
+styles/output.css
 
 # Misc
 .DS_Store
