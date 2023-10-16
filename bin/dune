@@ -1,5 +1,5 @@
-
 (executable
+ (package bisondrywall_io)
  (public_name bisondrywall_io)
  (name main)
- (libraries bisondrywall_io dream tyxml))
+ (libraries bisondrywall_io views dream tyxml))

@@ -29,4 +29,10 @@ setup.log
 # Local OPAM switch
 _opam/
 
+# Don't keep bundled JS files in the repo, since they change
+tailwindcss
+www/static/*.dist.js
+www/static/build.css
+
+# Misc
 .DS_Store
