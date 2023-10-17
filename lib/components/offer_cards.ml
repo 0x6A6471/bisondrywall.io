@@ -2,8 +2,7 @@ open Tyxml.Html
 module Ty = Bisondrywall_io.Ty
 
 type item =
-  { id : float
-  ; icon : Html_types.i Tyxml.Html.elt
+  { icon : Html_types.i Tyxml.Html.elt
   ; label : string
   ; description : string
   }
@@ -14,22 +13,62 @@ type offering =
   ; items : item list
   }
 
+let ph_icon name =
+  i
+    ~a:
+      [ a_class [ "ph"; name ]; a_style "font-size: 1.875rem; color: #D7B732;" ]
+    []
+;;
+
 let offerings =
   [ { id = 1
     ; title = "Drywall installation"
     ; items =
-        [ { id = 1.1
-          ; icon =
-              i
-                ~a:
-                  [ a_class [ "ph ph-house-line" ]
-                  ; a_style "font-size: 1.875rem; color: #D7B732;"
-                  ]
-                []
+        [ { icon = ph_icon "ph ph-house-line"
           ; label = "Residential"
           ; description =
               "Home extensions, wall additions, or simple patches, we work \
                quickly to accomodate any of your drywall needs."
+          }
+        ; { icon = ph_icon "ph-buildings"
+          ; label = "Commercial"
+          ; description =
+              "Looking for upgrades to the office? We help professional \
+               businesses with additions and upgrade their suites."
+          }
+        ]
+    }
+  ; { id = 2
+    ; title = "Drywall & plaster repair"
+    ; items =
+        [ { icon = ph_icon "ph-disc"
+          ; label = "Drywall cracks & holes"
+          ; description =
+              "Our team fixes damaged drywall caused by moisture, poor \
+               installation, or even the settling of the structure."
+          }
+        ; { icon = ph_icon "ph-fire"
+          ; label = "Fire, smoke & water damage"
+          ; description =
+              "Recent fire or pipe burst? We remove the lingering smell of \
+               smoke or mildew."
+          }
+        ]
+    }
+  ; { id = 3
+    ; title = "Drywall finishing"
+    ; items =
+        [ { icon = ph_icon "ph-paint-brush-household"
+          ; label = "Plaster finishing"
+          ; description =
+              "Unfinished drywall doesn’t look the best. Let our professionals \
+               help get your drywall ready for paint or paper."
+          }
+        ; { icon = ph_icon "ph-wall"
+          ; label = "Texture drywall"
+          ; description =
+              "Our team can help with any kind of texture you are looking \
+               for—skip trowel, orange peel, sand, knockdown, and smooth!"
           }
         ]
     }
@@ -58,7 +97,13 @@ let offering_to_html offering =
   let open Tyxml in
   Html.(
     div
-      ~a:[ Html.a_class [ "rounded-[40px] bg-gray-700 p-8" ] ]
+      ~a:
+        [ Html.a_class
+            (if offering.id == 3
+             then
+               [ "md:col-span-2 xl:col-span-1 rounded-[40px] bg-gray-700 p-8" ]
+             else [ "rounded-[40px] bg-gray-700 p-8" ])
+        ]
       ([ h3
            ~a:
              [ a_class
