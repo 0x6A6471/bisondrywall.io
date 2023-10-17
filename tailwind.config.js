@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./bin/main.ml", "./lib/**/*.ml", "./www/**/*.js", "./scripts/**/*.js"],
+  content: ["./bin/main.ml", "./lib/**/*.ml"],
   theme: {
     extend: {
       colors: {
@@ -16,10 +16,22 @@ module.exports = {
           800: '#1C1C1C',
           900: '#161616',
         },
-
         yellow: {
           base: '#D7B732',
           dark: '#514513',
+        },
+      },
+      animation: {
+        marquee: "marquee 50s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          from: {
+            transform: 'translateX(0)',
+          },
+          to: {
+            transform: 'translateX(calc(-100% - 2.5rem))',
+          },
         },
       },
     },
@@ -29,7 +41,7 @@ module.exports = {
       md: '768px',
       lg: '1024px',
       xl: '1280px',
-      '2xl': '1536px'
+      '2xl': '1536px',
     },
   },
 };
