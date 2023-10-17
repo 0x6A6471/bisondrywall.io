@@ -1,7 +1,9 @@
+open Tyxml.Html
 module Ty = Bisondrywall_io.Ty
 
 type item =
   { id : float
+  ; icon : Html_types.i Tyxml.Html.elt
   ; label : string
   ; description : string
   }
@@ -17,6 +19,13 @@ let offerings =
     ; title = "Drywall installation"
     ; items =
         [ { id = 1.1
+          ; icon =
+              i
+                ~a:
+                  [ a_class [ "ph ph-house-line" ]
+                  ; a_style "font-size: 1.875rem; color: #D7B732;"
+                  ]
+                []
           ; label = "Residential"
           ; description =
               "Home extensions, wall additions, or simple patches, we work \
@@ -32,7 +41,8 @@ let offering_items_to_html item =
   Html.(
     div
       ~a:[ a_class [ "mt-6 flex md:mt-12" ] ]
-      [ div
+      [ span [ item.icon ]
+      ; div
           ~a:[ a_class [ "ml-4" ] ]
           [ h4
               ~a:
