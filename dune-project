@@ -22,9 +22,13 @@
  (depends
    (ocaml (>= "5.1.0"))
    (dune (>= "3.11.0"))
+   cohttp-lwt-unix
+   dotenv  
    dream
    tyxml
-   )
+   lwt 
+   ppx_deriving ppx_deriving_yojson
+   yojson)
  (tags
-  (topics "to describe" your project)))
+ (topics "to describe" your project)))
 ; 

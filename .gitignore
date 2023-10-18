@@ -36,3 +36,5 @@ styles/output.css
 
 # Misc
 .DS_Store
+
+.env

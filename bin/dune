@@ -2,4 +2,10 @@
  (package bisondrywall_io)
  (public_name bisondrywall_io)
  (name main)
- (libraries bisondrywall_io dream tyxml views))
+ (libraries 
+   cohttp-lwt-unix
+   dotenv 
+   dream 
+   tyxml 
+   bisondrywall_io 
+   views))
