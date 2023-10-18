@@ -1,7 +1,7 @@
 open Tyxml.Html
 module Ty = Bisondrywall_io.Ty
 
-let home_body _ =
+let home_body photos =
   [ div
       ~a:[ a_class [ "jumbotron" ] ]
       [ div
@@ -40,12 +40,12 @@ let home_body _ =
   ; main
       ~a:[ a_class [ "mt-8 w-full space-y-24 md:mt-16 md:space-y-48" ] ]
       [ Components.Offer_cards.offer_cards ()
-      ; Components.Photos_marquee.photos_marquee ()
+      ; Components.Photos_marquee.photos_marquee photos
       ]
   ]
 ;;
 
-let home_page _ =
+let home_page photos =
   let page =
     html
       (head
@@ -55,7 +55,7 @@ let home_page _ =
          ])
       (body
          ~a:[ a_class [ "bg-gray-900 text-base text-gray-100 md:text-lg" ] ]
-         (home_body ()))
+         (home_body photos))
   in
   Dream.html (Ty.html_to_string page)
 ;;

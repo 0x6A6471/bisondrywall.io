@@ -1,5 +1,10 @@
 open Tyxml.Html
 
+let format_json_string str =
+  let open Yojson.Safe in
+  str |> from_string |> pretty_to_string
+;;
+
 let top_photos =
   [ "https://source.unsplash.com/s86WhGhp25Y"
   ; "https://source.unsplash.com/NoRsyXmHGpI"
@@ -79,7 +84,7 @@ let bottom_marquee =
     ]
 ;;
 
-let photos_marquee _ =
+let photos_marquee photos =
   div
     [ h2
         ~a:
@@ -94,6 +99,11 @@ let photos_marquee _ =
         ~a:
           [ a_class [ "relative flex flex-col justify-center overflow-hidden" ]
           ]
-        [ top_marquee; bottom_marquee ]
+        [ top_marquee
+        ; bottom_marquee
+        ; pre
+            ~a:[ a_class [ "text-base text-white" ] ]
+            [ txt (format_json_string photos) ]
+        ]
     ]
 ;;

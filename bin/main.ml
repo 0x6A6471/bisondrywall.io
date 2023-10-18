@@ -1,4 +1,4 @@
-open Lwt.Infix
+open Lwt.Syntax
 open Cohttp
 open Cohttp_lwt_unix
 
@@ -27,31 +27,30 @@ let get_photos _ =
       ~path:"112096071040835/photos"
       ~query:[ "limit", [ "100" ]; "fields", [ "link,alt_text,images" ] ]
   in
-  let response =
-    Client.get ~headers uri
-    >>= fun (resp, body) ->
-    let code = resp |> Response.status |> Code.code_of_status in
-    if Code.is_success code
-    then body |> Cohttp_lwt.Body.to_string >|= fun body -> Some body
-    else Lwt.return None
-  in
-  response
+  let* resp, body = Client.get ~headers uri in
+  let code = resp |> Response.status |> Code.code_of_status in
+  if Code.is_success code
+  then
+    let* body_str = Cohttp_lwt.Body.to_string body in
+    Lwt.return (Some body_str)
+  else Lwt.return None
 ;;
 
 let () =
   Dream.run
   @@ Dream.logger
+  @@ Dream_livereload.inject_script ()
   @@ Dream.router
-       [ Dream.get "/" (fun _ -> Views.Index.home_page ())
-       ; Dream.get "/about" (fun _ -> Dream.html "About")
-       ; Dream.get "/api/photos" (fun _ ->
-           get_photos ()
-           >>= function
-           | Some body -> Dream.json body
+       [ Dream.get "/" (fun _ ->
+           let* photos = get_photos () in
+           match photos with
+           | Some photos -> Views.Index.home_page photos
            | None ->
              Dream.json
                {|{"error":"An error occurred while fetching the photos."}|})
+       ; Dream.get "/about" (fun _ -> Dream.html "About")
        ; Dream.get "/styles/**" @@ Dream.static "./styles"
        ; Dream.get "/assets/**" @@ Dream.static "./assets"
+       ; Dream_livereload.route ()
        ]
 ;;

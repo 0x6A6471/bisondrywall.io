@@ -22,11 +22,10 @@
  (depends
    (ocaml (>= "5.1.0"))
    (dune (>= "3.11.0"))
-   cohttp-lwt-unix
    dotenv  
-   dream
+   dream dream-livereload
    tyxml
-   lwt 
+   lwt cohttp-lwt-unix
    ppx_deriving ppx_deriving_yojson
    yojson)
  (tags

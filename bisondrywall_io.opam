@@ -12,11 +12,12 @@ bug-reports: "https://github.com/jakequinter/bisondrywall_io/issues"
 depends: [
   "ocaml" {>= "5.1.0"}
   "dune" {>= "3.11" & >= "3.11.0"}
-  "cohttp-lwt-unix"
   "dotenv"
   "dream"
+  "dream-livereload"
   "tyxml"
   "lwt"
+  "cohttp-lwt-unix"
   "ppx_deriving"
   "ppx_deriving_yojson"
   "yojson"

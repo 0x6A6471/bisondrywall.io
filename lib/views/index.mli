@@ -1,1 +1,1 @@
-val home_page : unit -> Dream.response Lwt.t
+val home_page : string -> Dream.response Lwt.t
