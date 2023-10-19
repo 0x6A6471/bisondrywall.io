@@ -1,7 +1,8 @@
 open Tyxml.Html
 module Ty = Bisondrywall_io.Ty
+open Components.Photos_marquee
 
-let home_body photos =
+let home_body (photos : photo list) =
   [ div
       ~a:[ a_class [ "jumbotron" ] ]
       [ div

@@ -22,7 +22,7 @@ module.exports = {
         },
       },
       animation: {
-        marquee: "marquee 50s linear infinite",
+        marquee: "marquee 150s linear infinite",
       },
       keyframes: {
         marquee: {
