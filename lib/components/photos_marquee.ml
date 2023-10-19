@@ -11,24 +11,6 @@ let format_json_string str =
   str |> from_string |> pretty_to_string
 ;;
 
-let top_photos =
-  [ "https://source.unsplash.com/s86WhGhp25Y"
-  ; "https://source.unsplash.com/NoRsyXmHGpI"
-  ; "https://source.unsplash.com/uEFombN3J5U"
-  ; "https://source.unsplash.com/MyVH8UVJDBE"
-  ; "https://source.unsplash.com/IoINVPQe738"
-  ]
-;;
-
-let bottom_photos =
-  [ "https://source.unsplash.com/UOavP_Z38lE"
-  ; "https://source.unsplash.com/UZe35tk5UoA"
-  ; "https://source.unsplash.com/7-xmprXdiAk"
-  ; "https://source.unsplash.com/PV9QQFDB5W8"
-  ; "https://source.unsplash.com/TSYQ5stQVjg"
-  ]
-;;
-
 let photo_el ~src =
   img
     ~a:
@@ -42,52 +24,45 @@ let photo_el ~src =
     ()
 ;;
 
-let top_marquee photos =
+let photo_marquee ~direction ~margin_top photos =
   div
     ~a:
-      [ a_class [ "pointer-events-none relative flex gap-10 overflow-hidden" ] ]
+      [ a_class
+          [ Printf.sprintf
+              "pointer-events-none relative %s flex gap-10 overflow-hidden"
+              margin_top
+          ]
+      ]
     [ div
         ~a:
           [ a_class
-              [ "animate-marquee flex min-w-full shrink-0 items-center \
-                 justify-around gap-10"
+              [ Printf.sprintf
+                  "animate-marquee flex min-w-full shrink-0 items-center \
+                   justify-around gap-10 %s"
+                  direction
               ]
           ]
         (List.map (fun photo -> photo_el ~src:photo.source) photos)
     ; div
         ~a:
           [ a_class
-              [ "animate-marquee flex min-w-full shrink-0 items-center \
-                 justify-around gap-10"
+              [ Printf.sprintf
+                  "animate-marquee flex min-w-full shrink-0 items-center \
+                   justify-around gap-10 %s"
+                  direction
               ]
           ]
         (List.map (fun photo -> photo_el ~src:photo.source) photos)
     ]
 ;;
 
+let top_marquee photos = photo_marquee ~direction:"" ~margin_top:"" photos
+
 let bottom_marquee photos =
-  div
-    ~a:
-      [ a_class
-          [ "pointer-events-none relative mt-10 flex gap-10 overflow-hidden" ]
-      ]
-    [ div
-        ~a:
-          [ a_class
-              [ "animate-marquee flex min-w-full shrink-0 items-center \
-                 justify-around gap-10 [animation-direction:reverse]"
-              ]
-          ]
-        (List.map (fun photo -> photo_el ~src:photo.source) photos)
-    ; div
-        ~a:
-          [ a_class
-              [ "animate-marquee flex min-w-full shrink-0 items-center \
-                 justify-around gap-10 [animation-direction:reverse]"
-              ]
-          ]
-        (List.map (fun photo -> photo_el ~src:photo.source) photos)
-    ]
+  photo_marquee
+    ~direction:"[animation-direction:reverse]"
+    ~margin_top:"mt-10"
+    photos
 ;;
 
 let split_list lst n =
