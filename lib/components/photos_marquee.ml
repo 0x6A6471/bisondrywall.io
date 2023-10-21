@@ -15,7 +15,7 @@ let photo_el ~src =
   img
     ~a:
       [ a_class
-          [ "aspect-square max-w-[clamp(10rem,28vmin,20rem)] rounded-md \
+          [ "h-[400px] w-[300px] max-w-[clamp(10rem,28vmin,20rem)] rounded-md \
              object-cover shadow-md"
           ]
       ]
@@ -95,6 +95,27 @@ let photos_marquee (photos : photo list) =
             [ a_class
                 [ "relative flex flex-col justify-center overflow-hidden" ]
             ]
-          [ top_marquee top_photos; bottom_marquee bottom_photos ]
+          [ top_marquee top_photos
+          ; bottom_marquee bottom_photos
+          ; div
+              ~a:[ a_class [ "px-8" ] ]
+              [ a
+                  ~a:
+                    [ a_class
+                        [ "hover-arrow float-right mt-4 inline-flex \
+                           items-center text-gray-50"
+                        ]
+                    ; a_href "https://m.facebook.com/bisondrywall"
+                    ]
+                  [ txt "Check us out on Facebook"
+                  ; i
+                      ~a:
+                        [ a_class [ "ph ph-arrow-right ml-2" ]
+                        ; a_style "color: #D7B732;"
+                        ]
+                      []
+                  ]
+              ]
+          ]
       ]
 ;;

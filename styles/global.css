@@ -75,3 +75,11 @@ a {
   background-position: right center; /* change the direction of the change here */
   text-decoration: none;
 }
+
+.ph-arrow-right {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-arrow:hover .ph-arrow-right {
+  transform: translateX(4px);
+}
