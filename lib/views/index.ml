@@ -42,6 +42,8 @@ let home_body (photos : photo list) =
       ~a:[ a_class [ "mt-8 w-full space-y-24 md:mt-16 md:space-y-48" ] ]
       [ Components.Offer_cards.offer_cards ()
       ; Components.Photos_marquee.photos_marquee photos
+      ; Components.Testomonials.testomonials ()
+        (* ; Components.Callout.callout () *)
       ]
   ]
 ;;

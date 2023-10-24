@@ -56,10 +56,9 @@ let () =
            let* photos = get_photos () in
            match photos with
            | Some photos -> Views.Index.home_page photos
-           | None ->
-             Dream.json
-               {|{"error":"An error occurred while fetching the photos."}|})
-       ; Dream.get "/about" (fun _ -> Dream.html "About")
+           | None -> Views.Index.home_page [])
+       ; Dream.get "/privacy" (fun _ -> Dream.html "Privacy")
+       ; Dream.get "/terms" (fun _ -> Dream.html "Terms")
        ; Dream.get "/styles/**" @@ Dream.static "./styles"
        ; Dream.get "/assets/**" @@ Dream.static "./assets"
        ; Dream_livereload.route ()
