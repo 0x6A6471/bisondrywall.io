@@ -29,7 +29,7 @@ let photo_marquee ~direction ~margin_top photos =
     ~a:
       [ a_class
           [ Printf.sprintf
-              "pointer-events-none relative %s flex gap-10 overflow-hidden"
+              "pointer-events-none relative %s flex gap-x-4 overflow-hidden"
               margin_top
           ]
       ]
@@ -38,7 +38,7 @@ let photo_marquee ~direction ~margin_top photos =
           [ a_class
               [ Printf.sprintf
                   "animate-marquee flex min-w-full shrink-0 items-center \
-                   justify-around gap-10 %s"
+                   justify-around gap-x-4 %s"
                   direction
               ]
           ]
@@ -48,7 +48,7 @@ let photo_marquee ~direction ~margin_top photos =
           [ a_class
               [ Printf.sprintf
                   "animate-marquee flex min-w-full shrink-0 items-center \
-                   justify-around gap-10 %s"
+                   justify-around gap-x-4 %s"
                   direction
               ]
           ]
@@ -61,7 +61,7 @@ let top_marquee photos = photo_marquee ~direction:"" ~margin_top:"" photos
 let bottom_marquee photos =
   photo_marquee
     ~direction:"[animation-direction:reverse]"
-    ~margin_top:"mt-10"
+    ~margin_top:"mt-4"
     photos
 ;;
 

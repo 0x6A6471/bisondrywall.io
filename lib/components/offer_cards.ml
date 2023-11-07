@@ -110,7 +110,7 @@ let offering_to_html offering =
 
 let offer_cards _ =
   div
-    ~a:[ a_class [ "mx-auto max-w-screen-xl px-8 xl:px-0" ] ]
+    ~a:[ a_class [ "mx-auto max-w-screen-xl px-8 2xl:px-0" ] ]
     [ h2
         ~a:
           [ a_class
