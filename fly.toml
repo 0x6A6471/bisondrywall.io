@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for rough-thunder-3028 on 2023-11-15T14:27:47-05:00
+# fly.toml app configuration file generated for bisondrywall-io on 2023-11-15T16:21:01-05:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "rough-thunder-3028"
+app = "bisondrywall-io"
 primary_region = "ewr"
 
 [build]

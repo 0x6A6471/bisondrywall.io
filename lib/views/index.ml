@@ -55,6 +55,22 @@ let home_page photos =
       (head
          (title (txt "Bison Drywall"))
          [ link ~rel:[ `Stylesheet ] ~href:"/styles/output.css" ()
+         ; link
+             ~rel:[ `Icon ]
+             ~href:"/assets/favicons/android-chrome-192x192.png"
+             ()
+         ; link
+             ~rel:[ `Icon ]
+             ~href:"/assets/favicons/android-chrome-512x512.png"
+             ()
+         ; link ~rel:[ `Icon ] ~href:"/assets/favicons/apple-touch-icon.png" ()
+         ; link ~rel:[ `Icon ] ~href:"/assets/favicons/browserconfig.xml" ()
+         ; link ~rel:[ `Icon ] ~href:"/assets/favicons/favicon-16x16.png" ()
+         ; link ~rel:[ `Icon ] ~href:"/assets/favicons/favicon-32x32.png" ()
+         ; link ~rel:[ `Icon ] ~href:"/assets/favicons/favicon.ico" ()
+         ; link ~rel:[ `Icon ] ~href:"/assets/favicons/mstile-150x150.png" ()
+         ; link ~rel:[ `Icon ] ~href:"/assets/favicons/safari-pinned-tab.svg" ()
+         ; link ~rel:[ `Icon ] ~href:"/assets/favicons/site.webmanifest" ()
          ; script ~a:[ a_src "https://unpkg.com/@phosphor-icons/web" ] (txt "")
          ])
       (body
