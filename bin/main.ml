@@ -48,7 +48,7 @@ let get_photos _ =
 ;;
 
 let () =
-  Dream.run
+  Dream.run ~interface:"0.0.0.0"
   @@ Dream.logger
   @@ Dream_livereload.inject_script ()
   @@ Dream.router
