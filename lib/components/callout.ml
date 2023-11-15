@@ -12,5 +12,24 @@ let callout _ =
               ]
           ]
         [ txt "Get started with Bison Drywall\n" ]
+    ; p
+        ~a:[ a_class [ "mx-auto max-w-xl text-white opacity-80" ] ]
+        [ txt
+            "Bison drywall is here to help with whatever you need. Reach out \
+             to us\n\
+            \        today!"
+        ]
+    ; a
+        ~a:
+          [ a_href "mailto:bisondrywalllc.com"
+          ; a_class
+              [ "mt-8 inline-flex items-center rounded-xl bg-black px-8 py-4 \
+                 font-medium text-white hover:scale-105 \
+                 hover:transition-transform duration-200 ease-in-out"
+              ]
+          ]
+        [ txt "Contact Us"
+        ; i ~a:[ a_class [ "ml-2 ph ph-paper-plane-tilt" ] ] []
+        ]
     ]
 ;;

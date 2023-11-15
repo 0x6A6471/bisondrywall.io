@@ -83,3 +83,14 @@ a {
 .hover-arrow:hover .ph-arrow-right {
   transform: translateX(4px);
 }
+
+.callout {
+  background: linear-gradient(
+    270deg,
+    rgba(215, 183, 50, 0.25) 0%,
+    rgba(215, 183, 50, 0.5) 78%,
+    rgba(215, 183, 50, 0.75) 100%
+  );
+  box-shadow: 0 10px 40px 0 #463c13;
+  border-radius: 40px;
+}

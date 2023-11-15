@@ -43,8 +43,9 @@ let home_body (photos : photo list) =
       [ Components.Offer_cards.offer_cards ()
       ; Components.Photos_marquee.photos_marquee photos
       ; Components.Testomonials.testomonials ()
-        (* ; Components.Callout.callout () *)
+      ; Components.Callout.callout ()
       ]
+  ; Components.Footer.footer ()
   ]
 ;;
 
