@@ -57,7 +57,7 @@ let () =
            match photos with
            | Some photos -> Views.Index.home_page photos
            | None -> Views.Index.home_page [])
-       ; Dream.get "/privacy" (fun _ -> Dream.html "Privacy")
+       ; Dream.get "/privacy" (fun _ -> Views.Privacy.privacy_page ())
        ; Dream.get "/terms" (fun _ -> Dream.html "Terms")
        ; Dream.get "/styles/**" @@ Dream.static "./styles"
        ; Dream.get "/assets/**" @@ Dream.static "./assets"
