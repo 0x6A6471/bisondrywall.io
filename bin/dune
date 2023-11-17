@@ -1,0 +1,11 @@
+(executable
+ (package bisondrywall_io)
+ (public_name bisondrywall_io)
+ (name main)
+ (libraries 
+   dotenv 
+   dream dream-livereload
+   lwt cohttp-lwt-unix
+   tyxml 
+   bisondrywall_io 
+   views))

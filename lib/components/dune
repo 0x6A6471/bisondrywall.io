@@ -1,0 +1,3 @@
+(library
+ (name components)
+ (libraries bisondrywall_io dream fmt tyxml))
