@@ -35,8 +35,8 @@ let footer _ =
               ]
             [ link ~href:"mailto:bisondrywallllc@gmail.com" ~label:"Contact us"
             ; link ~href:"https://m.facebook.com/bisondrywall" ~label:"Facebook"
-            ; link ~href:"/privacy" ~label:"Privacy"
-            ; link ~href:"/terms" ~label:"Terms"
+              (* ; link ~href:"/privacy" ~label:"Privacy" *)
+              (* ; link ~href:"/terms" ~label:"Terms" *)
             ]
         ]
     ]
