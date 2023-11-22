@@ -15,7 +15,7 @@ let photo_el ~src =
   img
     ~a:
       [ a_class
-          [ "h-[400px] w-[300px] max-w-[clamp(10rem,28vmin,20rem)] rounded-md \
+          [ "h-[400px] w-[300px] max-w-[clamp(20rem,28vmin,20rem)] rounded-md \
              object-cover shadow-md"
           ]
       ]

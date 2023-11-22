@@ -54,7 +54,15 @@ let home_page photos =
     html
       (head
          (title (txt "Bison Drywall"))
-         [ link ~rel:[ `Stylesheet ] ~href:"/styles/output.css" ()
+         [ meta
+             ~a:
+               [ a_name "viewport"
+               ; a_content
+                   "viewport-fit=cover, width=device-width, initial-scale=1.0, \
+                    minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+               ]
+             ()
+         ; link ~rel:[ `Stylesheet ] ~href:"/styles/output.css" ()
          ; link
              ~rel:[ `Icon ]
              ~href:"/assets/favicons/android-chrome-192x192.png"
