@@ -1,5 +1,0 @@
-(rule
-  (alias tailwind)
-  ; (deps ./styles/global.css)
-  (action (run ./tailwindcss -i ../../styles/global.css -o ../../styles/output.css -c ../../tailwind.config.js)))
-

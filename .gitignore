@@ -1,40 +1,32 @@
-### OCaml ###
-*.annot
-*.cmo
-*.cma
-*.cmi
-*.a
-*.o
-*.cmx
-*.cmxs
-*.cmxa
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# ocamlbuild working directory
-_build/
+node_modules
+dist
+dist-ssr
+*.local
 
-# ocamlbuild targets
-*.byte
-*.native
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# oasis generated files
-setup.data
-setup.log
-
-# Merlin configuring file for Vim and Emacs
+# ReScript
+/lib/
+.bsb.lock
 .merlin
 
-# Dune generated files
-*.install
-
-# Local OPAM switch
-_opam/
-
-# Don't keep bundled JS files in the repo, since they change
-tailwindcss
-styles/*.dist.js
-styles/output.css
-
-# Misc
-.DS_Store
-
+# App
 .env
