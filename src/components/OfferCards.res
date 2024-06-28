@@ -16,7 +16,7 @@ let offerings = [
     title: "Drywall installation",
     items: [
       {
-        icon: "garage",
+        icon: "ph-house-line",
         label: "Residential",
         description: "Home extensions, wall additions, or simple patches, we work \
                quickly to accomodate any of your drywall needs.",
@@ -76,20 +76,14 @@ let make = () =>
     <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
       {offerings
       ->Array.map(o =>
-        <div className="rounded-[40px] bg-gray-700 p-8">
-          <h3
-            key={string_of_int(o.id)}
-            className="text-center text-xl font-bold text-yellow-base md:text-3xl">
+        <div key={string_of_int(o.id)} className="rounded-[40px] bg-gray-700 p-8">
+          <h3 className="text-center text-xl font-bold text-yellow-base md:text-2xl">
             {React.string(o.title)}
           </h3>
           {o.items
           ->Array.map(i =>
-            <div className="mt-6 flex md:mt-12">
-              <span>
-                <svg className="w-6 h-6">
-                  <use href="/sprite.svg#home" />
-                </svg>
-              </span>
+            <div key={i.icon} className="mt-6 flex md:mt-12">
+              <i className={`ph ${i.icon} text-yellow-base text-2xl`} />
               <div className="ml-4">
                 <h4 className="mb-3 text-lg font-medium text-gray-50 md:text-xl">
                   {React.string(i.label)}

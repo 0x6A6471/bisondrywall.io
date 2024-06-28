@@ -6,7 +6,7 @@ let make = () => {
         <img src="/logo.png" width="94" height="40" alt="Bison Drywall logo" />
         <div className="px-8 pt-24 text-center sm:px-0">
           <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-7xl">
-            {"Bison Dryall"->React.string}
+            {"Bison Drywall"->React.string}
           </h1>
           <h2 className="mt-2 text-lg text-white opacity-50 md:text-2xl">
             {"Whatever your needs, Bison Drywall can help"->React.string}

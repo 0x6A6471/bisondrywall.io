@@ -18,7 +18,7 @@ function Home(props) {
                               JsxRuntime.jsxs("div", {
                                     children: [
                                       JsxRuntime.jsx("h1", {
-                                            children: "Bison Dryall",
+                                            children: "Bison Drywall",
                                             className: "text-4xl font-bold text-white sm:text-5xl md:text-7xl"
                                           }),
                                       JsxRuntime.jsx("h2", {

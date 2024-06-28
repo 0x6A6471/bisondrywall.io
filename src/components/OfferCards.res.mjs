@@ -8,7 +8,7 @@ var offerings = [
     title: "Drywall installation",
     items: [
       {
-        icon: "garage",
+        icon: "ph-house-line",
         label: "Residential",
         description: "Home extensions, wall additions, or simple patches, we work \
                quickly to accomodate any of your drywall needs."
@@ -72,18 +72,13 @@ function OfferCards(props) {
                                         children: [
                                           JsxRuntime.jsx("h3", {
                                                 children: o.title,
-                                                className: "text-center text-xl font-bold text-yellow-base md:text-3xl"
-                                              }, String(o.id)),
+                                                className: "text-center text-xl font-bold text-yellow-base md:text-2xl"
+                                              }),
                                           o.items.map(function (i) {
                                                 return JsxRuntime.jsxs("div", {
                                                             children: [
-                                                              JsxRuntime.jsx("span", {
-                                                                    children: JsxRuntime.jsx("svg", {
-                                                                          children: JsxRuntime.jsx("use", {
-                                                                                href: "/sprite.svg#home"
-                                                                              }),
-                                                                          className: "w-6 h-6"
-                                                                        })
+                                                              JsxRuntime.jsx("i", {
+                                                                    className: "ph " + i.icon + " text-yellow-base text-2xl"
                                                                   }),
                                                               JsxRuntime.jsxs("div", {
                                                                     children: [
@@ -99,11 +94,11 @@ function OfferCards(props) {
                                                                   })
                                                             ],
                                                             className: "mt-6 flex md:mt-12"
-                                                          });
+                                                          }, i.icon);
                                               })
                                         ],
                                         className: "rounded-[40px] bg-gray-700 p-8"
-                                      });
+                                      }, String(o.id));
                           }),
                       className: "grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3"
                     })
