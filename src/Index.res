@@ -1,5 +1,3 @@
-module Link = Next.Link
-
 type photo = {"link": string, "alt_text": string, "source": string}
 
 module Response = {
@@ -30,11 +28,11 @@ let default = (props: props) => {
           <h2 className="mt-2 text-lg text-white opacity-50 md:text-2xl">
             {"Whatever your needs, Bison Drywall can help"->React.string}
           </h2>
-          <Link
+          <Next.Link
             href="mailto:bisondrywalllc.com"
             className="btn-grad mt-8 inline-flex items-center rounded-xl px-8 py-4 font-medium text-white md:mt-16">
             {"Contact Us"->React.string}
-          </Link>
+          </Next.Link>
         </div>
       </div>
     </div>
@@ -42,7 +40,33 @@ let default = (props: props) => {
       <OfferCards />
       <PhotosMarquee photos=props.photos />
       <Testomonials />
+      <Callout />
     </main>
+    <footer className="mt-24 md:mt-48 border-t border-gray-600 px-8 2xl:px-0">
+      <div
+        className="mx-auto flex max-w-7xl flex-col items-start justify-between py-4 xs:flex-row xs:items-center">
+        <div>
+          <img src="/logo.png" width="47" height="20" alt="Bison Drywall logo" />
+        </div>
+        <div
+          className="mt-4 flex flex-col space-x-0 space-y-4 xs:mt-0 xs:flex-row xs:space-y-0 xs:space-x-4">
+          <Next.Link
+            href="mailto:bisondrywalllc.com"
+            className="mx-0 text-xs text-gray-300 hover:text-gray-200 xs:mx-2">
+            {"Contact Us"->React.string}
+          </Next.Link>
+          <Next.Link
+            href="/privacy" className="mx-0 text-xs text-gray-300 hover:text-gray-200 xs:mx-2">
+            {"Privacy"->React.string}
+          </Next.Link>
+          <Next.Link
+            href="mailto:bisondrywalllc.com"
+            className="mx-0 text-xs text-gray-300 hover:text-gray-200 xs:mx-2">
+            {"Facebook"->React.string}
+          </Next.Link>
+        </div>
+      </div>
+    </footer>
   </>
 }
 
