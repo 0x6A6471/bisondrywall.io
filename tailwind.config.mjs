@@ -24,8 +24,15 @@ export default {
           dark: "#514513",
         },
       },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
       animation: {
         marquee: "marquee 150s linear infinite",
+        "marquee-reverse": "marquee 150s linear infinite reverse",
       },
       keyframes: {
         marquee: {

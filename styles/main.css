@@ -61,11 +61,8 @@ a {
   text-decoration: none;
 }
 
-.ph-arrow-right {
+.hover-arrow:hover svg:first-of-type {
   transition: transform 0.2s ease-in-out;
-}
-
-.hover-arrow:hover .ph-arrow-right {
   transform: translateX(4px);
 }
 
