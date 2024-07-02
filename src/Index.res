@@ -18,6 +18,9 @@ type props = {photos: array<photo>}
 
 let default = (props: props) => {
   <>
+    <Next.Head>
+      <title> {"Bison Drywall"->React.string} </title>
+    </Next.Head>
     <div className="jumbotron">
       <div className="p-4">
         <img src="/logo.png" width="94" height="40" alt="Bison Drywall logo" />

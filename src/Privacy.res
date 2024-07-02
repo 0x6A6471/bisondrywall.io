@@ -9,6 +9,9 @@ module TertiaryLink = {
 
 let default = () => {
   <div className="mx-auto max-w-4xl space-y-20 px-8 text-base lg:px-0">
+    <Next.Head>
+      <title> {"Bison Drywall | Privacy"->React.string} </title>
+    </Next.Head>
     <div className="pt-20">
       <h1 className="text-3xl font-bold uppercase text-white md:text-5xl">
         {"Privacy notice"->React.string}
@@ -18,8 +21,8 @@ let default = () => {
     <section className="space-y-4">
       <div>
         {"Thank you for choosing to be part of our community at Bison Drywall
-            LLC. (&quot;Company&quot;, &quot;we&quot;, &quot;us&quot;,
-            &quot;our&quot;). We are committed to protecting your personal
+            LLC. (\"Company\", \"we\", \"us\",
+            \"our\"). We are committed to protecting your personal
             information and your right to privacy. If you have any questions or
             concerns about this privacy notice, or our practices with regards to
             your personal information, please contact us at "->React.string}
@@ -30,7 +33,7 @@ let default = () => {
         {"When you visit our website "->React.string}
         <TertiaryLink href="https://bisondrywall.io" label="https://bisondrywall.io" />
         {" (the \"Website\"), and more generally, use any of our
-            services (the &quot;Services&quot;, which include the Website), we
+            services (the \"Services\", which include the Website), we
             appreciate that you are trusting us with your personal information.
             We take your privacy very seriously. In this privacy notice, we seek
             to explain to you in the clearest way possible what information we
