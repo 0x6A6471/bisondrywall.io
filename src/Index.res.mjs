@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import * as OfferCards from "./components/OfferCards.res.mjs";
+import * as Testomonials from "./components/Testomonials.res.mjs";
 import * as PhotosMarquee from "./components/PhotosMarquee.res.mjs";
 import * as JsxRuntime from "react/jsx-runtime";
 
 var $$Response = {};
 
 function $$default(props) {
-  console.log(props);
   return JsxRuntime.jsxs(JsxRuntime.Fragment, {
               children: [
                 JsxRuntime.jsx("div", {
@@ -48,7 +48,8 @@ function $$default(props) {
                         JsxRuntime.jsx(OfferCards.make, {}),
                         JsxRuntime.jsx(PhotosMarquee.make, {
                               photos: props.photos
-                            })
+                            }),
+                        JsxRuntime.jsx(Testomonials.make, {})
                       ],
                       className: "mt-8 w-full space-y-24 md:mt-16 md:space-y-48"
                     })

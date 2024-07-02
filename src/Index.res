@@ -19,8 +19,6 @@ external fetch: (
 type props = {photos: array<photo>}
 
 let default = (props: props) => {
-  Console.log(props)
-
   <>
     <div className="jumbotron">
       <div className="p-4">
@@ -43,6 +41,7 @@ let default = (props: props) => {
     <main className="mt-8 w-full space-y-24 md:mt-16 md:space-y-48">
       <OfferCards />
       <PhotosMarquee photos=props.photos />
+      <Testomonials />
     </main>
   </>
 }
