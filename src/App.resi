@@ -1,2 +1,2 @@
-@react.component
-let make: unit => Jsx.element
+type props
+let default: props => React.element
