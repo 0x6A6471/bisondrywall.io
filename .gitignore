@@ -13,5 +13,11 @@ yarn-error.log
 .merlin
 lib/
 
-.env*
+# ignore .mjs files
+*.mjs
 
+# except for these
+!tailwind.config.mjs
+!next.config.mjs
+
+.env*
