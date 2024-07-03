@@ -85,7 +85,7 @@ function $$default(props) {
                                             children: "Privacy"
                                           }),
                                       JsxRuntime.jsx(Link, {
-                                            href: "mailto:bisondrywalllc.com",
+                                            href: "https://m.facebook.com/bisondrywall",
                                             className: "mx-0 text-xs text-gray-300 hover:text-gray-200 xs:mx-2",
                                             children: "Facebook"
                                           })
@@ -101,7 +101,7 @@ function $$default(props) {
             });
 }
 
-async function getServerSideProps(_ctx) {
+async function getStaticProps(_ctx) {
   var token = process.env.FACEBOOK_API_TOKEN;
   var result;
   try {
@@ -150,6 +150,6 @@ async function getServerSideProps(_ctx) {
 export {
   $$Response ,
   $$default as default,
-  getServerSideProps ,
+  getStaticProps ,
 }
 /* Callout Not a pure module */

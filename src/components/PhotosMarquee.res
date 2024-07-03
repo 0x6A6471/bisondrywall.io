@@ -41,12 +41,12 @@ let make = (~photos) => {
         </div>
       </div>
       <div className="px-8">
-        <a
+        <Next.Link
           className="hover-arrow float-right mt-4 inline-flex items-center text-gray-50"
           href="https://m.facebook.com/bisondrywall">
           {"Check us out on Facebook"->React.string}
           <Icon name="arrow-right" className="fill-yellow-base ml-2" size="18" />
-        </a>
+        </Next.Link>
       </div>
     </div>
   </div>

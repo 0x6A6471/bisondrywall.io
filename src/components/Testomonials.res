@@ -52,7 +52,7 @@ let make = () => {
     <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
       {testomonials
       ->Array.map(t =>
-        <div className="rounded-[40px] bg-gray-700 p-8">
+        <div key={string_of_int(t.id)} className="rounded-[40px] bg-gray-700 p-8">
           <div className="flex">
             <div className="flex-shrink-0">
               <span
@@ -81,11 +81,11 @@ let make = () => {
       )
       ->React.array}
     </div>
-    <a
+    <Next.Link
       className="hover-arrow float-right mt-4 inline-flex items-center text-gray-50"
       href="https://www.google.com/search?q=bisondrywall+appleton+wi&sourceid=chrome&ie=UTF-8#lrd=0x8803b936501f9d47:0x39d4b236558d2ad4,1,,,">
       {"All reviews"->React.string}
       <Icon name="arrow-right" className="fill-yellow-base ml-2" size="18" />
-    </a>
+    </Next.Link>
   </div>
 }

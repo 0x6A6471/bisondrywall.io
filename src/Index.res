@@ -63,7 +63,7 @@ let default = (props: props) => {
             {"Privacy"->React.string}
           </Next.Link>
           <Next.Link
-            href="mailto:bisondrywalllc.com"
+            href="https://m.facebook.com/bisondrywall"
             className="mx-0 text-xs text-gray-300 hover:text-gray-200 xs:mx-2">
             {"Facebook"->React.string}
           </Next.Link>
@@ -73,7 +73,7 @@ let default = (props: props) => {
   </>
 }
 
-let getServerSideProps = async _ctx => {
+let getStaticProps = async _ctx => {
   let token = Env.facebookApiToken
 
   let result = try {
