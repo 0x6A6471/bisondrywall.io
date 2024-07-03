@@ -9,6 +9,40 @@ function MainLayout(props) {
                 JsxRuntime.jsxs(Head, {
                       children: [
                         JsxRuntime.jsx("link", {
+                              href: "/static/favicons/apple-touch-icon.png",
+                              rel: "apple-touch-icon",
+                              sizes: "180x180"
+                            }),
+                        JsxRuntime.jsx("link", {
+                              href: "/static/favicons/favicon-32x32.png",
+                              rel: "icon",
+                              sizes: "32x32",
+                              type: "image/png"
+                            }),
+                        JsxRuntime.jsx("link", {
+                              href: "/static/favicons/favicon-16x16.png",
+                              rel: "icon",
+                              sizes: "16x16",
+                              type: "image/png"
+                            }),
+                        JsxRuntime.jsx("link", {
+                              href: "/static/favicons/site.webmanifest",
+                              rel: "manifest"
+                            }),
+                        JsxRuntime.jsx("link", {
+                              href: "/static/favicons/safari-pinned-tab.svg",
+                              rel: "mask-icon",
+                              colorProfile: "#5bbad5"
+                            }),
+                        JsxRuntime.jsx("meta", {
+                              content: "#da532c",
+                              name: "msapplication-TileColor"
+                            }),
+                        JsxRuntime.jsx("meta", {
+                              content: "#ffffff",
+                              name: "theme-color"
+                            }),
+                        JsxRuntime.jsx("link", {
                               href: "https://fonts.googleapis.com",
                               rel: "preconnect"
                             }),
