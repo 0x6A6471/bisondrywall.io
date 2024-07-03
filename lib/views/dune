@@ -1,8 +1,0 @@
-(library
- (name views)
- (libraries 
-   bisondrywall_io 
-   components
-   dream 
-   fmt 
-   tyxml))

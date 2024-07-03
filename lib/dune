@@ -1,3 +1,0 @@
-(library
- (name bisondrywall_io)
- (libraries dream tyxml))
