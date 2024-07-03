@@ -10,11 +10,12 @@ let make = () => {
         {"Bison drywall is here to help with whatever you need. Reach out to us
         today!"->React.string}
       </p>
-      <a
+      <Next.Link
+        href="mailto:bisondrywallllc@gmail.com"
         className="mt-8 inline-flex items-center rounded-xl bg-black px-8 py-4 font-medium text-white hover:scale-105 hover:transition-transform duration-200 ease-in-out">
         {"Contact us"->React.string}
         <Icon name="paper-plane-tilt" className="fill-white ml-2" />
-      </a>
+      </Next.Link>
     </div>
   </div>
 }
