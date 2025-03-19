@@ -32,7 +32,7 @@ let default = (props: props) => {
             {"Whatever your needs, Bison Drywall can help"->React.string}
           </h2>
           <Next.Link
-            href="mailto:bisondrywalllc.com"
+            href="mailto:bisondrywalllc@gmail.com"
             className="btn-grad mt-8 inline-flex items-center rounded-xl px-8 py-4 font-medium text-white md:mt-16">
             {"Contact Us"->React.string}
           </Next.Link>
