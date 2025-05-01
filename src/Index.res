@@ -32,7 +32,7 @@ let default = (props: props) => {
             {"Whatever your needs, Bison Drywall can help"->React.string}
           </h2>
           <Next.Link
-            href="mailto:bisondrywalllc@gmail.com"
+            href="mailto:bisondrywallllc@gmail.com"
             className="btn-grad mt-8 inline-flex items-center rounded-xl px-8 py-4 font-medium text-white md:mt-16">
             {"Contact Us"->React.string}
           </Next.Link>
@@ -54,7 +54,7 @@ let default = (props: props) => {
         <div
           className="mt-4 flex flex-col space-x-0 space-y-4 xs:mt-0 xs:flex-row xs:space-y-0 xs:space-x-4">
           <Next.Link
-            href="mailto:bisondrywalllc.com"
+            href="mailto:bisondrywallllc@gmail.com"
             className="mx-0 text-xs text-gray-300 hover:text-gray-200 xs:mx-2">
             {"Contact Us"->React.string}
           </Next.Link>
