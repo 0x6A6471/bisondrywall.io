@@ -4,12 +4,17 @@
   "author": "0x6A6471 <x6a6471@fastmail.com>",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"bun --watch --outfile=dist/index.js --target=browser src/index.ts\" \"bunx http-server dist -p 3000\"",
-    "build": "mkdir -p dist && cp src/index.html dist/ && bun build src/index.ts --outfile=dist/index.js --target=browser"
+    "dev": "concurrently \"bun --watch --outfile=dist/index.js --target=browser src/index.ts\" \"bunx tailwindcss -i src/input.css -o dist/output.css --watch\" \"bunx chokidar 'src/index.html' -c 'cp src/index.html dist/'\" \"bunx http-server dist -p 3000\"",
+    "build": "mkdir -p dist && cp src/index.html dist/ && cp -r public/* dist/ && bunx tailwindcss -i src/input.css -o dist/output.css --minify && bun build src/index.ts --outfile=dist/index.js --target=browser"
   },
   "devDependencies": {
+    "chokidar-cli": "^3.0.0",
     "concurrently": "^9.2.0",
     "http-server": "^14.1.1",
     "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "tailwindcss": "^4.1.11"
   }
 }
