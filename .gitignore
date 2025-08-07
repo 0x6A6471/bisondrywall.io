@@ -1,23 +1,2 @@
-out
-
-.DS_Store
-*.swp
-*.swo
-
-node_modules/
-.next/
-
-yarn-error.log
-
-.bsb.lock
-.merlin
-lib/
-
-# ignore .mjs files
-*.mjs
-
-# except for these
-!tailwind.config.mjs
-!next.config.mjs
-
-.env*
+node_modules
+dist
