@@ -19,4 +19,4 @@ FACEBOOK_API_TOKEN=
 Generate a [Facebook Graph API](https://developers.facebook.com/docs/graph-api/guides/explorer/) token
 
 > [!IMPORTANT]
-> If you want photos, you can run `bun run build` to generate them.
+> If you want photos, you can run `bun run build` to generate them into `public/photos.json`.
