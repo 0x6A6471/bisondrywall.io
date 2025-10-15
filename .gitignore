@@ -27,3 +27,5 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 .cache
 *.tsbuildinfo
 
+# facebook api, generated at build time
+public/photos.json
