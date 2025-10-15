@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gray-50: #EDEDED;
+  --color-gray-100: #A0A0A0;
+  --color-gray-200: #7E7E7E;
+  --color-gray-300: #707070;
+  --color-gray-400: #3E3E3E;
+  --color-gray-500: #343434;
+  --color-gray-600: #2E2E2E;
+  --color-gray-700: #232323;
+  --color-gray-800: #1C1C1C;
+  --color-gray-900: #161616;
+
+  --color-yellow-base: #D7B732;
+  --color-yellow-dark: #514513;
+
+  --breakpoint-xs: 450px;
+  --breakpoint-3xl: 1920px;
+
+  --animate-marquee: marquee 150s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 150s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - 2.5rem));
+  }
+}
+
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(100% + 2.5rem));
+  }
+}
+
+@layer base {
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    background: #161616;
+    color: #a0a0a0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif, system-ui;
+  }
+}
+
+@layer components {
+  .jumbotron {
+    height: 550px;
+    background: radial-gradient(circle at 50% -50%, #ddc253 0%, #161616 90%);
+  }
+
+  @media (min-width: 767px) {
+    .jumbotron {
+      background: radial-gradient(circle at 50% -50%, #ddc253 0%, #161616 80%);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .jumbotron {
+      background: radial-gradient(circle at 50% -50%, #ddc253 0%, #161616 70%);
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .jumbotron {
+      background: radial-gradient(circle at 50% -50%, #ddc253 0%, #161616 55%);
+    }
+  }
+
+  .btn-grad {
+    background-image: linear-gradient(to right, #86721f 0%, #d7b732 51%, #86721f 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #201e12;
+  }
+
+  .btn-grad:hover {
+    background-position: right center;
+    text-decoration: none;
+  }
+
+  .hover-arrow:hover svg:first-of-type {
+    transition: transform 0.2s ease-in-out;
+    transform: translateX(4px);
+  }
+
+  .callout {
+    background: linear-gradient(270deg, rgba(215, 183, 50, 0.25) 0%, rgba(215, 183, 50, 0.5) 78%, rgba(215, 183, 50, 0.75) 100%);
+    box-shadow: 0 10px 40px 0 #463c13;
+    border-radius: 40px;
+  }
+}

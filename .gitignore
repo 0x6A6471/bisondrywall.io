@@ -1,23 +1,31 @@
+# dependencies (bun install)
+node_modules
+
+# output
 out
+dist
+*.tgz
 
-.DS_Store
-*.swp
-*.swo
+# code coverage
+coverage
+*.lcov
 
-node_modules/
-.next/
+# logs
+logs
+_.log
+report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 
-yarn-error.log
+# env
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
 
-.bsb.lock
-.merlin
-lib/
+# caches
+.eslintcache
+.cache
+*.tsbuildinfo
 
-# ignore .mjs files
-*.mjs
-
-# except for these
-!tailwind.config.mjs
-!next.config.mjs
-
-.env*
+# facebook api, generated at build time
+public/photos.json
