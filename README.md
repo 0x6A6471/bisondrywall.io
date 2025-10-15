@@ -9,7 +9,7 @@ $ bun install
 $ bun run dev
 ```
 
-Create a `.env`;
+Create a `.env`:
 
 ```
 FACEBOOK_API_TOKEN=
