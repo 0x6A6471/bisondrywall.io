@@ -3,8 +3,8 @@
 ### Running Locally
 
 ```
-$ git clone git@github.com:0x6A6471/0x6a6471.git
-$ cd  0x6a6471
+$ git clone git@github.com:0x6A6471/bisondrywall.io.git 
+$ cd bisondrywall.io
 $ bun install
 $ bun run dev
 ```
