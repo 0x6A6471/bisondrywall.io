@@ -1,15 +1,10 @@
 # bisondrywall.io
 
-To install dependencies:
+### Running Locally
 
-```bash
-bun install
 ```
-
-To run:
-
-```bash
-bun run index.ts
+$ git clone git@github.com:0x6A6471/0x6a6471.git
+$ cd  0x6a6471
+$ bun install
+$ bun run dev
 ```
-
-This project was created using `bun init` in bun v1.2.21. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
