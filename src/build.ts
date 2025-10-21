@@ -11,15 +11,20 @@ type FacebookResponse = {
 
 async function fetchFacebookPhotos(): Promise<Photo[]> {
   const token = process.env.FACEBOOK_API_TOKEN;
+  const url = process.env.FACEBOOK_API_URL;
 
   if (!token) {
     console.error("FACEBOOK_API_TOKEN environment variable is not set");
     return [];
   }
 
+  if (!url) {
+    console.error("FACEBOOK_API_URL environment variable is not set");
+    return [];
+  }
+
   try {
-    const response = await fetch(
-      "https://graph.facebook.com/v14.0/112096071040835/photos?limit=100&fields=link,alt_text,source",
+    const response = await fetch(url,
       {
         method: "GET",
         headers: {

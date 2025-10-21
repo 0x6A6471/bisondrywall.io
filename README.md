@@ -13,6 +13,7 @@ Create a `.env`:
 
 ```
 FACEBOOK_API_TOKEN=
+FACEBOOK_API_URL=
 ```
 
 ### Pulling photos
